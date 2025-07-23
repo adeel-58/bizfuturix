@@ -1,0 +1,100 @@
+/* Project.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
+.projects-container {
+    font-family: 'Roboto', sans-serif; /* Using Roboto font as per Services.css */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #383838;
+    text-align: center;
+    padding-bottom: 110px;
+}
+
+
+
+.agency-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 35.71px;
+    font-weight: 500;
+    color: #383838;
+    margin-bottom: 28px;
+    line-height: 1.2;
+}
+
+.agency-description {
+    font-size: 1.125rem;
+    color: #383838;
+    line-height: 1.6;
+    margin-bottom: 110px; /* Adjusted margin to match Services.css */
+    max-width: 768px;
+    padding: 0 16px;
+}
+
+.cards-grid {
+   display: grid;
+    grid-template-columns: 1fr; /* Default to single column */
+    gap: 40px; /* gap-8 */
+    margin-bottom: 48px; /* mb-12 */
+    max-width: 100%; /* Max width for the grid */
+}
+
+@media (min-width: 768px) { /* Tablet and larger screens */
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (min-width: 1024px) { /* Desktop screens */
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    }
+}
+
+.project-card { /* Renamed from .service-card */
+    background-color: #ffffff;
+    border: 1px solid #707070;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    height: 350px; /* Fixed height as requested */
+    width: 350px; /* Fixed width as requested */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    padding-top: 70px; /* Adjusted padding-top to account for the circle's new size and position */
+    position: relative;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+
+
+
+.start-project-button {
+    background-color: #ff6a00;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    width: 220px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif; /* Assuming Montserrat is desired for buttons */
+    font-weight: 600;
+    margin: 20px auto 0 auto;
+}
+
+.start-project-button:hover {
+    background-color: #ea580c;
+}

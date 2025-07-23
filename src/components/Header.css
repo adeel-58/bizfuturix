@@ -1,0 +1,133 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+.header-container {
+  width: 100%;
+  color: white; /* Default text color for transparent background */
+  position: fixed; /* Changed from absolute to fixed for scrolling effect */
+  top: 0;
+  left: 0;
+  z-index: 100; /* Ensure header is on top */
+  background-color: transparent; /* Default transparent background */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* New class for when the header is scrolled */
+.header-container.scrolled {
+  background-color: white; /* White background on scroll */
+  color: #353535; /* Text color for white background */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: subtle shadow */
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  font-size: 13px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: white; /* This part of contact-info remains white */
+  padding-left: 5.2%;
+  width: 38.8%;
+  height: 50px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #353535; /* Ensure contact info text is dark on its white background */
+}
+
+.contact-info img {
+  height: 15px;
+}
+
+.social-links {
+  padding-right: 11.04%;
+}
+
+.social-links button {
+  background: none;
+  border: none;
+  color: white; /* Default white text for social links */
+  font-size: 12px;
+  margin-left: 15px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Adjust social links button color for scrolled state */
+.header-container.scrolled .social-links button {
+  color: #353535; /* Change button text color when header is white */
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+}
+
+.logo {
+  height: 60px;
+}
+
+.right-controls {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.project-btn {
+  margin-top: 0px;
+  background-color: #ff6a00;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  /* Removed padding as fixed width/height will handle sizing */
+  width: 220px; /* Example fixed width */
+  height: 50px; /* Example fixed height */
+  display: flex; /* Use flexbox to center text vertically and horizontally */
+  align-items: center; /* Centers text vertically */
+  justify-content: center; /* Centers text horizontally */
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.hamburger {
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-info span {
+    display: none;
+  }
+
+  .social-links button {
+    font-size: 11px;
+    margin-left: 5px;
+  }
+
+  .project-btn {
+    padding: 6px 12px;
+  }
+
+  .logo {
+    height: 28px;
+  }
+
+  .hamburger {
+    height: 18px;
+  }
+  .header-bottom {
+    padding: 20px 20px; /* Adjust padding for smaller screens */
+  }
+}

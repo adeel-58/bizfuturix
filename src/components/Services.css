@@ -1,0 +1,137 @@
+/* Services.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+.services-container {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Ensures padding doesn't add to total width/height */
+    background-color: #ffffff; /* White background */
+    color: #383838; /* Dark gray text */
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 110px;
+}
+
+.welcome-text {
+    font-size: 15px; /* text-sm */
+    text-transform: uppercase;
+    color: #383838; /* gray-500 */
+    margin-bottom: 38px; /* mb-2 */
+    font-weight: 600;
+}
+
+.agency-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 35.71px; /* text-4xl, md:text-5xl */
+    font-weight: 500; /* font-bold */
+    color: #383838; /* gray-900 */
+    margin-bottom: 28px; /* mb-6 */
+    line-height: 1.2; /* Adjust line height for better readability */
+}
+
+.agency-description {
+    font-size: 1.125rem; /* text-base, md:text-lg */
+    color: #383838; /* gray-600 */
+    line-height: 1.6; /* leading-relaxed */
+    margin-bottom: 150px; /* mb-12 */
+    max-width: 768px; /* max-w-4xl for text content */
+    padding: 0 16px; /* px-4 */
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column */
+    gap: 40px; /* gap-8 */
+    margin-bottom: 48px; /* mb-12 */
+   
+    max-width: 100%; /* Max width for the grid */
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens and up */
+    }
+}
+
+
+.service-card {
+    background-color: #ffffff;
+    border: 1px solid #707070; /* Updated border color */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    height: 350px; /* Fixed height as requested */
+    width: 350px; /* Fixed width as requested */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    padding: 24px; /* Default padding */
+    padding-top: 70px; /* Adjusted padding-top to account for the circle's new size and position */
+    position: relative; /* Essential for positioning the absolute icon-circle */
+    /* overflow: hidden; -- REMOVED to make the circle fully visible */
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+.icon-circle {
+      width: 96px; /* Retained 96px as per current state */
+    height: 96px; /* Retained 96px as per current state */
+    background-color: #f97316;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Position absolutely relative to .service-card */
+    top: -48px; /* Corrected: Half of 96px out of the top */
+    left: 20px; /* Corrected: Half of 96px out of the left */
+    z-index: 10; /* Ensure it's above other content */
+    /* margin-right: 300px; -- Removed as it conflicts with absolute positioning */
+    /* margin-bottom: 24px; -- Not relevant for absolute positioning */
+}
+
+.card-title {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    color: #383838; /* gray-900 */
+    margin-bottom: 12px; /* mb-3 */
+    
+}
+
+.card-description {
+  color: #383838; /* gray-600 */
+  text-align: justify;
+  line-height: 1.6;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 17px;
+  justify-content: center;
+}
+
+
+.start-project-button {
+    background-color: #ff6a00;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  width: 220px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin: 20px auto 0 auto; 
+}
+
+.start-project-button:hover {
+    background-color: #ea580c; /* hover:bg-orange-600 */
+}
