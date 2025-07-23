@@ -1,0 +1,130 @@
+/* TalkToUs.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'); /* For form labels/inputs */
+
+
+.talk-to-us-container {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    background-color: #ffffff; /* White background */
+    color: #383838; /* Dark gray text */
+    text-align: center;
+      padding-bottom: 115px;
+}
+
+.talk-to-us-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.talk-to-us-heading-image {
+    height: 88px;
+    width: 345px;
+    max-width: 100%; /* Ensure responsiveness */
+    height: auto;
+    display: block;
+    /* The image itself contains the circles and "Talk to Us!" text */
+}
+
+.talk-to-us-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #383838;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    max-width: 500px; /* Limit width for readability */
+    font-weight: 500;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px; /* Max width for the form */
+    gap: 30px; /* Space between form groups */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align label to the left */
+    font-weight: 500;
+}
+
+.form-label {
+    font-family: 'Roboto', sans-serif; /* Use Inter for labels as seen in image */
+    font-size: 18px;
+    color: #383838;
+    font-weight: 600;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px 0; /* Padding for input */
+    border: none;
+    border-bottom: 1px solid #d1d5db; /* Thin bottom border */
+    font-size: 18px;
+    color: #383838;
+    background-color: transparent; /* Transparent background */
+    outline: none; /* Remove outline on focus */
+    transition: border-color 0.3s ease;
+    font-weight: 500;
+}
+
+.form-input:focus {
+    border-bottom-color: #f97316; /* Orange border on focus */
+}
+
+.form-input.textarea {
+    resize: vertical; /* Allow vertical resizing for textarea */
+    min-height: 80px; /* Minimum height for message area */
+     font-weight: 500;
+}
+
+.send-message-button {
+    background-color: #ff6a00;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    width: 220px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif; /* Assuming Montserrat is desired for buttons */
+    font-weight: 600;
+    margin: 50px auto 0 auto; /* Center button and add top margin */
+    transition: background-color 0.3s ease;
+}
+
+.send-message-button:hover {
+    background-color: #ea580c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .talk-to-us-container {
+        padding: 60px 15px;
+    }
+    .talk-to-us-description {
+        margin-bottom: 30px;
+    }
+    .contact-form {
+        gap: 20px;
+    }
+    .send-message-button {
+        width: 180px;
+        height: 45px;
+        font-size: 11px;
+    }
+}

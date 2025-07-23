@@ -1,8 +1,8 @@
 /* Project.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
 
-.projects-container {
-    font-family: 'Roboto', sans-serif; /* Using Roboto font as per Services.css */
+.projects-container1 {
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,12 +11,25 @@
     background-color: #ffffff;
     color: #383838;
     text-align: center;
-    padding-bottom: 110px;
+    padding-bottom: 115px;
+
+
+    /* Background image properties */
+    background-image: url('../assets/images/projectback.svg'); /* Path to your SVG */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: right center; /* Aligns the image to the right and vertically centers it */
+    background-size: contain; /* Ensures the whole image is visible within the container */
 }
 
+.welcome-text1 {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #383838;
+    margin-bottom: 38px;
+    font-weight: 600;
+}
 
-
-.agency-title {
+.agency-title1 {
     font-family: 'Roboto', sans-serif;
     font-size: 35.71px;
     font-weight: 500;
@@ -25,36 +38,40 @@
     line-height: 1.2;
 }
 
-.agency-description {
-    font-size: 1.125rem;
+.agency-description1 {
+    font-size: 18px;
     color: #383838;
     line-height: 1.6;
-    margin-bottom: 110px; /* Adjusted margin to match Services.css */
+    margin-bottom: 110px;
     max-width: 768px;
     padding: 0 16px;
+    font-weight: 500;
 }
 
-.cards-grid {
-   display: grid;
-    grid-template-columns: 1fr; /* Default to single column */
-    gap: 40px; /* gap-8 */
-    margin-bottom: 48px; /* mb-12 */
-    max-width: 100%; /* Max width for the grid */
+.cards-grid1 {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column on small screens */
+    gap: 40px; /* Gap between cards */
+    margin-bottom: 48px;
+    
+    /* Max width for the grid to contain cards, based on 3 cards of 300px + 2 gaps for desktop */
+    max-width:100%;
+    justify-items: center; /* Center individual cards in their grid cells */
 }
 
 @media (min-width: 768px) { /* Tablet and larger screens */
-    .cards-grid {
+    .cards-grid1 {
         grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
     }
 }
 
 @media (min-width: 1024px) { /* Desktop screens */
-    .cards-grid {
+    .cards-grid1 {
         grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
     }
 }
 
-.project-card { /* Renamed from .service-card */
+.project-card1 {
     background-color: #ffffff;
     border: 1px solid #707070;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -62,22 +79,60 @@
     width: 350px; /* Fixed width as requested */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 24px;
-    padding-top: 70px; /* Adjusted padding-top to account for the circle's new size and position */
-    position: relative;
+    position: relative; /* Essential for positioning children absolutely */
+    overflow: hidden; /* Important to contain the image and overlay within the rounded corners */
     box-sizing: border-box;
     transition: transform 0.3s ease-in-out;
+    cursor: pointer; /* Indicate interactivity */
 }
 
-.project-card:hover {
+.project-card1:hover {
     transform: translateY(-5px);
 }
 
+.project-image1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the card without distortion */
+    transition: transform 0.4s ease-in-out; /* Slightly longer and smoother zoom effect */
+}
 
+.project-card1:hover .project-image1 {
+    transform: scale(1.1); /* Slightly more pronounced zoom on hover */
+}
 
+.project-overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#3838388e; /* Slightly darker black with 70% opacity */
+    display: flex;
+    flex-direction: column; /* Allows title and potential description to stack */
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.4s ease-in-out; /* Slightly longer and smoother fade-in */
+    pointer-events: none; /* Allows clicks to pass through to the card if needed */
+   
+}
 
-.start-project-button {
+.project-card1:hover .project-overlay1 {
+    opacity: 1; /* Fully visible on hover */
+}
+
+.project-overlay-title1 {
+    color: #ffffff; /* White text for the title */
+    font-size: 1.6rem; /* Slightly larger font size for prominence */
+    font-weight: 700; /* Bold text */
+    text-align: center;
+    padding: 10px;
+    text-shadow: 2px 2px 6px #38383813; /* More pronounced text shadow for readability */
+}
+
+/* Keeping the button styles from the previous version */
+.start-project-button1 {
     background-color: #ff6a00;
     color: white;
     border: none;
@@ -90,11 +145,11 @@
     font-weight: bold;
     cursor: pointer;
     font-size: 12px;
-    font-family: 'Montserrat', sans-serif; /* Assuming Montserrat is desired for buttons */
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     margin: 20px auto 0 auto;
 }
 
-.start-project-button:hover {
+.start-project-button1:hover {
     background-color: #ea580c;
 }
