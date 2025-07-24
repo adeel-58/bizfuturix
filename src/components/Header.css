@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
 .header-container {
   width: 100%;
   color: white; /* Default text color for transparent background */
@@ -23,6 +23,7 @@
   justify-content: space-between;
   align-items: end;
   font-size: 13px;
+  transition: opacity 0.3s ease;
 }
 
 .contact-info {
@@ -61,7 +62,7 @@
 
 /* Adjust social links button color for scrolled state */
 .header-container.scrolled .social-links button {
-  color: #353535; /* Change button text color when header is white */
+  color: #000000; /* Change button text color when header is white */
 }
 
 .header-bottom {
