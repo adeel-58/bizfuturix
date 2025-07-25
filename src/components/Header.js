@@ -7,14 +7,14 @@ import logoBlack from '../icons/blacklogo.svg';
 import phoneIcon from '../icons/phone.svg';
 import emailIcon from '../icons/email.svg';
 
-import hamburgerWhite from '../icons/hamburger.svg';
-import hamburgerBlack from '../icons/blackhamburger.svg';
 import fbIcon from '../icons/fb.svg';
 import instaIcon from '../icons/insta.svg';
 import twIcon from '../icons/tw.svg';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,10 +25,12 @@ const Header = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [scrolled]);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <header className={`header-container ${scrolled ? 'scrolled' : ''}`}>
@@ -65,13 +67,30 @@ const Header = () => {
         />
         <div className="right-controls">
           <button className="project-btn">START A PROJECT</button>
-          <img
-            src={scrolled ? hamburgerBlack : hamburgerWhite}
-            alt="Menu"
-            className="hamburger"
-          />
+
+          {/* Hamburger icon with animation */}
+          <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
+
+
+      {menuOpen && (
+        <div className="fullscreen-menu">
+          <ul className="menu-list">
+            <li><a href="http://localhost:3000/">HOME</a></li>
+            <li><a href="/">PORTFOLIO</a></li>
+            <li><a href="/">SERVICES</a></li>
+            <li><a href="/">ABOUT US</a></li>
+            <li><a href="/">BLOG</a></li>
+            <li><a href="/">CONTACT</a></li>
+          </ul>
+        </div>
+      )}
+
     </header>
   );
 };

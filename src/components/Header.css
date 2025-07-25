@@ -125,13 +125,52 @@
   font-weight: 600;
 }
 
+
 .hamburger {
-  height: 30px;
+  height: 35px;
+  width: 50px;
+  position: relative;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10000; /* 🧡 Add this to stay above .fullscreen-menu */
 }
-.hamburger:hover {
-  background: linear-gradient(135deg, #FF6B00 50%, white 50%);
+
+.hamburger span {
+  height: 6px;
+  width: 100%;
+  background: #FF6B00;
+   background: #ffffff;
+  transition: all 0.3s ease;
+  display: block;
 }
+.header-container.scrolled .hamburger span {
+  background: #383838;
+}
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 13px;
+  background: #FF6B00;
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  background: #FF6B00;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 13px;
+  background: #FF6B00;
+}
+
+
+
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .contact-info span {
@@ -158,3 +197,78 @@
     padding: 20px 20px; /* Adjust padding for smaller screens */
   }
 }
+
+
+
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease;
+  padding-left: 80px; /* Push items away from edge */
+  justify-content: flex-start; /* 👈 align content to the left */
+}
+
+
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left; /* Align text left */
+}
+
+.menu-list li {
+  margin: 20px 0;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+.menu-list li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.menu-list li:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.menu-list li:nth-child(3) {
+  animation-delay: 0.20s;
+}
+.menu-list li:nth-child(4) {
+  animation-delay: 0.25s;
+}
+.menu-list li:nth-child(5) {
+  animation-delay: 0.3s;
+}
+.menu-list li:nth-child(6) {
+  animation-delay: 0.35s;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 4px;
+  display: inline-block;
+  border-bottom: 2px solid transparent; /* default no underline */
+}
+
+.menu-list a:hover {
+  color: #FF6B00;
+}
+
