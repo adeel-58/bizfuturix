@@ -1,16 +1,37 @@
-import React from 'react';
-import './TalkToUs.css'; // Import the raw CSS file
-
-// Import the specific image for the heading
-import talkToUsHeadingImage from '../assets/images/talktous.png'; 
+import React, { useEffect, useRef, useState } from 'react';
+import './TalkToUs.css';
 
 const TalkToUs = () => {
+    const headerRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.unobserve(entry.target); // Run only once
+                }
+            },
+            { threshold: 0.3 }
+        );
+
+        if (headerRef.current) {
+            observer.observe(headerRef.current);
+        }
+    }, []);
+
     return (
         <div className="talk-to-us-container">
-            <div className="talk-to-us-header">
-                {/* Image for the "Talk to Us!" heading */}
-                <img src={talkToUsHeadingImage} alt="Talk to Us!" className="talk-to-us-heading-image" />
+            <div className="talk-to-us-header" ref={headerRef}>
+                <div className={`overlapping-circles ${isVisible ? 'animate-circles' : ''}`}>
+                    <div className="circle circle1"></div>
+                    <div className="circle circle2"></div>
+                    <div className="circle circle3"></div>
+                </div>
+                <h2 className="talk-to-us-title">Talk to Us!</h2>
             </div>
+
             <p className="talk-to-us-description">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>

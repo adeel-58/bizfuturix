@@ -1,23 +1,26 @@
-
-
+/* ----------------------------------------
+   📌 HEADER WRAPPER
+---------------------------------------- */
 .header-container {
-  width: 100%;
-  color: white; /* Default text color for transparent background */
-  position: fixed; /* Changed from absolute to fixed for scrolling effect */
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 100; /* Ensure header is on top */
-  background-color: transparent; /* Default transparent background */
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
+  width: 100%;
+  color: white;
+  background-color: transparent;
+  z-index: 100;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* New class for when the header is scrolled */
 .header-container.scrolled {
-  background-color: white; /* White background on scroll */
-  color: #353535; /* Text color for white background */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: subtle shadow */
+  background-color: white;
+  color: #353535;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* ----------------------------------------
+   📌 HEADER TOP
+---------------------------------------- */
 .header-top {
   display: flex;
   justify-content: space-between;
@@ -26,11 +29,12 @@
   transition: opacity 0.3s ease;
 }
 
+/* Contact Info */
 .contact-info {
   display: flex;
   align-items: center;
   gap: 20px;
-  background-color: white; /* This part of contact-info remains white */
+  background-color: white;
   padding-left: 3.8%;
   width: 33.8%;
   height: 50px;
@@ -39,13 +43,14 @@
   font-size: 12px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  color: #353535; /* Ensure contact info text is dark on its white background */
+  color: #353535;
 }
 
 .contact-info img {
   height: 15px;
 }
 
+/* Social Links */
 .social-links {
   display: flex;
   align-items: center;
@@ -60,8 +65,8 @@
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
-  color: white; /* default text color */
   font-weight: 600;
+  color: white;
   transition: transform 0.2s ease;
 }
 
@@ -73,22 +78,24 @@
   width: 16px;
   height: 16px;
   object-fit: contain;
-  filter: brightness(0) invert(1); /* white icons by default */
+  filter: brightness(0) invert(1);
 }
 
-/* Change text & icon color on scroll */
 .header-container.scrolled .social-link {
   color: #000000;
 }
 
 .header-container.scrolled .social-icon {
-  filter: brightness(0); /* dark icons when header background is white */
-}
-/* Adjust social links button color for scrolled state */
-.header-container.scrolled .social-links button {
-  color: #000000; /* Change button text color when header is white */
+  filter: brightness(0);
 }
 
+.header-container.scrolled .social-links button {
+  color: #000000;
+}
+
+/* ----------------------------------------
+   📌 HEADER BOTTOM
+---------------------------------------- */
 .header-bottom {
   display: flex;
   justify-content: space-between;
@@ -107,25 +114,25 @@
 }
 
 .project-btn {
-  margin-top: 0px;
   background-color: #ff6a00;
   color: white;
   border: none;
   border-radius: 30px;
-  /* Removed padding as fixed width/height will handle sizing */
-  width: 220px; /* Example fixed width */
-  height: 50px; /* Example fixed height */
-  display: flex; /* Use flexbox to center text vertically and horizontally */
-  align-items: center; /* Centers text vertically */
-  justify-content: center; /* Centers text horizontally */
-  font-weight: bold;
-  cursor: pointer;
+  width: 220px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 12px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+  cursor: pointer;
+  margin-top: 0;
 }
 
-
+/* ----------------------------------------
+   📌 HAMBURGER MENU
+---------------------------------------- */
 .hamburger {
   height: 35px;
   width: 50px;
@@ -134,20 +141,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  z-index: 10000; /* 🧡 Add this to stay above .fullscreen-menu */
+  z-index: 10000;
 }
 
 .hamburger span {
   height: 6px;
   width: 100%;
-  background: #FF6B00;
-   background: #ffffff;
+  background: #ffffff;
   transition: all 0.3s ease;
   display: block;
 }
+
 .header-container.scrolled .hamburger span {
   background: #383838;
 }
+
 .hamburger.open span:nth-child(1) {
   transform: rotate(45deg);
   position: absolute;
@@ -167,11 +175,94 @@
   background: #FF6B00;
 }
 
+/* ----------------------------------------
+   📌 FULLSCREEN MENU
+---------------------------------------- */
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 80px;
+  transition: all 0.4s ease;
+}
 
+/* Menu Items */
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  position: relative;
+}
 
+.menu-list li {
+  margin: 20px 0;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 0.5s ease forwards;
+}
 
+.menu-list li.active::before {
+  content: '';
+  position: absolute;
+  left: -80px; /* Align with .fullscreen-menu padding */
+  top: 100%;
+  height: 2px;
+  width: calc(100% + 80px);
+  background-color: #FF6B00;
+  animation: growLine 0.4s ease forwards;
+}
 
-/* Responsive */
+.menu-list a {
+  text-decoration: none;
+  color: white;
+  font-size: 35.71px;
+  font-weight: 600;
+  padding-bottom: 6px;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease;
+}
+
+.menu-list a:hover {
+  color: #FF6B00;
+}
+
+/* Remove border-bottom from old active */
+.menu-list a.active {
+  border-bottom: none;
+}
+
+/* ----------------------------------------
+   📌 KEYFRAMES
+---------------------------------------- */
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes growLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(100% + 80px);
+  }
+}
+
+/* ----------------------------------------
+   📌 RESPONSIVE
+---------------------------------------- */
 @media (max-width: 768px) {
   .contact-info span {
     display: none;
@@ -193,82 +284,8 @@
   .hamburger {
     height: 18px;
   }
+
   .header-bottom {
-    padding: 20px 20px; /* Adjust padding for smaller screens */
+    padding: 20px 20px;
   }
 }
-
-
-
-.fullscreen-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: black;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  transition: all 0.4s ease;
-  padding-left: 80px; /* Push items away from edge */
-  justify-content: flex-start; /* 👈 align content to the left */
-}
-
-
-
-.menu-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: left; /* Align text left */
-}
-
-.menu-list li {
-  margin: 20px 0;
-  opacity: 0;
-  transform: translateX(-50px);
-  animation: slideInLeft 0.5s ease forwards;
-}
-
-.menu-list li:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.menu-list li:nth-child(2) {
-  animation-delay: 0.15s;
-}
-.menu-list li:nth-child(3) {
-  animation-delay: 0.20s;
-}
-.menu-list li:nth-child(4) {
-  animation-delay: 0.25s;
-}
-.menu-list li:nth-child(5) {
-  animation-delay: 0.3s;
-}
-.menu-list li:nth-child(6) {
-  animation-delay: 0.35s;
-}
-
-@keyframes slideInLeft {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.menu-list a {
-  text-decoration: none;
-  color: white;
-  font-size: 2.5rem;
-  font-weight: bold;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-  padding-bottom: 4px;
-  display: inline-block;
-  border-bottom: 2px solid transparent; /* default no underline */
-}
-
-.menu-list a:hover {
-  color: #FF6B00;
-}
-

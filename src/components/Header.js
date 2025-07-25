@@ -14,23 +14,30 @@ import twIcon from '../icons/tw.svg';
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  
+  const [activeItem, setActiveItem] = useState('HOME');
 
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 100;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
+      setScrolled(isScrolled);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [scrolled]);
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const menuItems = [
+    { label: 'HOME', href: '/' },
+    { label: 'OUR PROJECTS', href: '/p' },
+    { label: 'SERVICES', href: '/' },
+    { label: 'ABOUT US', href: '/' },
+    { label: 'BLOG', href: '/' },
+    { label: 'CONTACT', href: '/' },
+  ];
 
   return (
     <header className={`header-container ${scrolled ? 'scrolled' : ''}`}>
@@ -67,8 +74,6 @@ const Header = () => {
         />
         <div className="right-controls">
           <button className="project-btn">START A PROJECT</button>
-
-          {/* Hamburger icon with animation */}
           <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
             <span></span>
             <span></span>
@@ -77,20 +82,26 @@ const Header = () => {
         </div>
       </div>
 
-
       {menuOpen && (
         <div className="fullscreen-menu">
           <ul className="menu-list">
-            <li><a href="http://localhost:3000/">HOME</a></li>
-            <li><a href="/">PORTFOLIO</a></li>
-            <li><a href="/">SERVICES</a></li>
-            <li><a href="/">ABOUT US</a></li>
-            <li><a href="/">BLOG</a></li>
-            <li><a href="/">CONTACT</a></li>
+            {menuItems.map((item, index) => (
+              <li
+                key={item.label}
+                className={activeItem === item.label ? 'active' : ''}
+                style={{ animationDelay: `${0.1 + index * 0.05}s` }}
+              >
+                <a
+                  href={item.href}
+                  onClick={() => setActiveItem(item.label)}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       )}
-
     </header>
   );
 };
