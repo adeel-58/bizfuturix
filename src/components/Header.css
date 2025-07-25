@@ -123,7 +123,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 17px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   cursor: pointer;
@@ -184,13 +184,25 @@
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: black;
+  background-color: #1c353f;
   z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding-left: 80px;
   transition: all 0.4s ease;
+  
+}
+.fullscreen-menu-logo {
+  position: absolute;
+  right: 150px;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 50vw;           /* Half of the viewport width */
+  max-width: none;       /* Allow full size if needed */
+  opacity: 0.1;         /* Soft visibility */
+  pointer-events: none;
+  user-select: none;
 }
 
 /* Menu Items */

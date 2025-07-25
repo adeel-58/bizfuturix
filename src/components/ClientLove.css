@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 80vh;
     padding: 40px 20px;
     box-sizing: border-box;
     background-color: #383838; /* Dark background color from image */
@@ -190,4 +190,87 @@
     .review-text-snippet {
         font-size: 0.85rem;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Extend left section for logo + button + text */
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 40px;
+    color: #ffffff;
+}
+
+.comma-icon {
+    width: 80px;
+    height: auto;
+    margin-bottom: -35px;
+}
+
+.client-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.client-description {
+    font-size: 1.1rem;
+    max-width: 480px;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+/* Logos section */
+.client-logos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    flex-wrap: nowrap; /* logos stay in one line */
+    overflow-x: auto;   /* prevent layout breaking on smaller screens */
+    margin-bottom: 40px;
+}
+
+.client-logo {
+    width: 100px; /* smaller size */
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* make logos white on dark background */
+    transition: transform 0.2s ease-in-out;
+}
+
+.client-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Provided button style */
+.start-project-button2 {
+    background-color: #ffffff;
+    color: #ff6a00;
+    border: none;
+    border-radius: 30px;
+    width: 220px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+    margin-left: 0; /* Ensure it's left-aligned */
 }

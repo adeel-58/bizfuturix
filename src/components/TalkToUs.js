@@ -2,29 +2,31 @@ import React, { useEffect, useRef, useState } from 'react';
 import './TalkToUs.css';
 
 const TalkToUs = () => {
-    const headerRef = useRef(null);
-    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef(null);
+    const [animateCircles, setAnimateCircles] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    observer.unobserve(entry.target); // Run only once
+                    setAnimateCircles(true);
+                    observer.unobserve(entry.target); // Run once
                 }
             },
-            { threshold: 0.3 }
+            { threshold: 0.08 } // Trigger when 50% is visible
         );
 
-        if (headerRef.current) {
-            observer.observe(headerRef.current);
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
         }
+
+        return () => observer.disconnect();
     }, []);
 
     return (
-        <div className="talk-to-us-container">
-            <div className="talk-to-us-header" ref={headerRef}>
-                <div className={`overlapping-circles ${isVisible ? 'animate-circles' : ''}`}>
+        <div className="talk-to-us-container" ref={sectionRef}>
+            <div className="talk-to-us-header">
+                <div className={`overlapping-circles ${animateCircles ? 'animate-circles' : ''}`}>
                     <div className="circle circle1"></div>
                     <div className="circle circle2"></div>
                     <div className="circle circle3"></div>
@@ -49,7 +51,7 @@ const TalkToUs = () => {
                     <label htmlFor="message" className="form-label">Message</label>
                     <textarea id="message" name="message" className="form-input textarea"></textarea>
                 </div>
-                <button type="submit" className="send-message-button">SEND MESSAGE</button>
+                <button type="submit" className="send-message-button">Send message</button>
             </form>
         </div>
     );

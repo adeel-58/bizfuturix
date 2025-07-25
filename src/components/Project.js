@@ -62,7 +62,7 @@ const Project = () => {
             </div>
 
             <button className="start-project-button1">
-                VIEW ALL PROJECTS
+                View all projects
             </button>
         </div>
     );

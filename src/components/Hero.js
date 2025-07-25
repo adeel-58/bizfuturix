@@ -11,18 +11,26 @@ const Hero = () => {
       }}
     >
       <div className="hero-content">
-        <div class="orange-line-wrapper">
-          <span className="orange-dot">●</span>
-          <span className="orange-text">Hey there,</span><br />
-          
-        </div>
-        <h1>
-          looking for bold design<br />
-          that works?
-        </h1>
-        <p>WE DESIGN. WE ADVERTISE. YOU GROW</p>
-        <button className="read-more-btn">Read more</button>
-      </div>
+  <div className="orange-line-wrapper animated-text animate-delay-1">
+    <span className="orange-text">Hey there,</span>
+  </div>
+
+  <h1 className="hero-heading animated-text animate-delay-2">
+    looking for bold design that
+  </h1>
+  <h1 className="hero-heading animated-text animate-delay-3">
+    works?
+  </h1>
+
+  <p className="hero-subtext animated-text animate-delay-4">
+  WE DESIGN. WE ADVERTISE. YOU GROW
+</p>
+      
+ <button className="read-more-btn animated-text animate-delay-5">
+  Read more
+</button>
+
+</div>
     </section>
   );
 };

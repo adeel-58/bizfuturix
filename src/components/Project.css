@@ -11,14 +11,15 @@
     background-color: #ffffff;
     color: #383838;
     text-align: center;
-    padding-bottom: 115px;
+    padding-bottom: 92px;
 
 
-    /* Background image properties */
-    background-image: url('../assets/images/projectback.svg'); /* Path to your SVG */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: right center; /* Aligns the image to the right and vertically centers it */
-    background-size: contain; /* Ensures the whole image is visible within the container */
+    background-image: url('../assets/images/projectback.svg');
+  background-repeat: no-repeat;
+  background-position: right 1%;      /* ✅ Aligns right & top */
+  background-size: 33%;                /* ✅ Controls image scale */
+  min-height: 700px;   
+
 }
 
 .welcome-text1 {
@@ -42,10 +43,10 @@
     font-size: 18px;
     color: #383838;
     line-height: 1.6;
-    margin-bottom: 110px;
+    margin-bottom: 82px;
     max-width: 768px;
     padding: 0 16px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .cards-grid1 {
@@ -144,7 +145,7 @@
     justify-content: center;
     font-weight: bold;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 17px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     margin: 20px auto 0 auto;

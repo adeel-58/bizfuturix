@@ -3,6 +3,7 @@ import './Header.css';
 
 import logoWhite from '../icons/logo.svg';
 import logoBlack from '../icons/blacklogo.svg';
+import menubackground from '../icons/menubackground.svg';
 
 import phoneIcon from '../icons/phone.svg';
 import emailIcon from '../icons/email.svg';
@@ -100,7 +101,11 @@ const Header = () => {
               </li>
             ))}
           </ul>
+
+          {/* Add this logo image */}
+          <img src={menubackground} alt="Logo" className="fullscreen-menu-logo" />
         </div>
+
       )}
     </header>
   );

@@ -1,83 +1,66 @@
-/* ======================================
-   FONT IMPORTS
-====================================== */
+/* TalkToUs.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'); /* For form labels/inputs */
 
-/* ======================================
-   CONTAINER STYLING
-====================================== */
+
 .talk-to-us-container {
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0px 20px 115px;
+    padding: 0px 20px;
     box-sizing: border-box;
-    background-color: #ffffff;
-    color: #383838;
+    background-color: #ffffff; /* White background */
+    color: #383838; /* Dark gray text */
     text-align: center;
-    margin-top: 50px;
+      padding-bottom: 92px;
+      margin-top: 50px;
 }
 
-/* ======================================
-   HEADER SECTION
-====================================== */
 .talk-to-us-header {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 40px;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .talk-to-us-heading-image {
+    height: 88px;
     width: 345px;
-    max-width: 100%;
+    max-width: 100%; /* Ensure responsiveness */
     height: auto;
     display: block;
-}
-
-/* ======================================
-   TITLE TEXT
-====================================== */
-.talk-to-us-title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 35.71px;
-    font-weight: 500;
-    color: #383838;
-    margin: 0;
+    /* The image itself contains the circles and "Talk to Us!" text */
 }
 
 .talk-to-us-description {
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    font-weight: 500;
+    color: #383838;
     line-height: 1.6;
-    max-width: 500px;
     margin-bottom: 50px;
+    max-width: 500px; /* Limit width for readability */
+    font-weight: 400;
 }
 
-/* ======================================
-   FORM SECTION
-====================================== */
 .contact-form {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 600px;
-    gap: 30px;
+    max-width: 600px; /* Max width for the form */
+    gap: 30px; /* Space between form groups */
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /* Align label to the left */
     font-weight: 500;
 }
 
 .form-label {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Use Inter for labels as seen in image */
     font-size: 18px;
     color: #383838;
     font-weight: 600;
@@ -85,29 +68,27 @@
 
 .form-input {
     width: 100%;
-    padding: 10px 0;
+    padding: 10px 0; /* Padding for input */
     border: none;
-    border-bottom: 1px solid #d1d5db;
+    border-bottom: 1px solid #d1d5db; /* Thin bottom border */
     font-size: 18px;
     color: #383838;
-    background-color: transparent;
-    outline: none;
-    font-weight: 500;
+    background-color: transparent; /* Transparent background */
+    outline: none; /* Remove outline on focus */
     transition: border-color 0.3s ease;
+    font-weight: 500;
 }
 
 .form-input:focus {
-    border-bottom-color: #f97316;
+    border-bottom-color: #f97316; /* Orange border on focus */
 }
 
 .form-input.textarea {
-    resize: vertical;
-    min-height: 150px;
+    resize: vertical; /* Allow vertical resizing for textarea */
+    min-height: 150px; /* Minimum height for message area */
+     font-weight: 500;
 }
 
-/* ======================================
-   BUTTON
-====================================== */
 .send-message-button {
     background-color: #ff6a00;
     color: white;
@@ -118,11 +99,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 12px;
+    font-weight: bold;
     cursor: pointer;
-    margin: 50px auto 0;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif; /* Assuming Montserrat is desired for buttons */
+    font-weight: 600;
+    margin: 50px auto 0 auto; /* Center button and add top margin */
     transition: background-color 0.3s ease;
 }
 
@@ -130,9 +112,35 @@
     background-color: #ea580c;
 }
 
-/* ======================================
-   OVERLAPPING CIRCLES (LEFT SIDE)
-====================================== */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .talk-to-us-container {
+        padding: 60px 15px;
+    }
+    .talk-to-us-description {
+        margin-bottom: 30px;
+    }
+    .contact-form {
+        gap: 20px;
+    }
+    .send-message-button {
+        width: 180px;
+        height: 45px;
+        font-size: 11px;
+    }
+}
+
+
+
+
+.talk-to-us-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
 .overlapping-circles {
     position: relative;
     width: 70px;
@@ -143,78 +151,60 @@
     justify-content: center;
 }
 
+/* Base Circle Styling */
+
 .circle {
     position: absolute;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: #ff6a00;
-    opacity: 0;
     transform: translateX(-100vw);
 }
 
-/* Final positioning and opacity for each circle */
+/* Final positions (after animation) */
 .circle1 {
     left: 0;
     z-index: 3;
     opacity: 0.4;
-    animation: slideInFromLeft 1s ease-out 0.2s forwards;
 }
-
 .circle2 {
     left: 15px;
     z-index: 2;
     opacity: 0.7;
-    animation: slideInFromLeft 1s ease-out 0.4s forwards;
 }
-
 .circle3 {
     left: 30px;
     z-index: 1;
     opacity: 1;
-    animation: slideInFromLeft 1s ease-out 0.6s forwards;
 }
 
-/* Optional trigger class (used via JS if needed) */
+
+/* Animate on trigger */
 .animate-circles .circle1 {
-    animation-delay: 0.1s;
     animation: slideInFromLeft 0.5s ease-out forwards;
+    animation-delay: 0.1s;
 }
 .animate-circles .circle2 {
-    animation-delay: 0.3s;
     animation: slideInFromLeft 0.5s ease-out forwards;
+    animation-delay: 0.3s;
 }
 .animate-circles .circle3 {
-    animation-delay: 0.5s;
     animation: slideInFromLeft 0.5s ease-out forwards;
+    animation-delay: 0.5s;
 }
 
-/* Keyframes */
 @keyframes slideInFromLeft {
     to {
         transform: translateX(0);
+        
     }
 }
-
-/* ======================================
-   RESPONSIVE STYLING
-====================================== */
-@media (max-width: 768px) {
-    .talk-to-us-container {
-        padding: 60px 15px 100px;
-    }
-
-    .talk-to-us-description {
-        margin-bottom: 30px;
-    }
-
-    .contact-form {
-        gap: 20px;
-    }
-
-    .send-message-button {
-        width: 180px;
-        height: 45px;
-        font-size: 11px;
-    }
+.talk-to-us-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 35.71px;
+    font-weight: 500;
+    color: #383838;
+    margin: 0;
 }
+
