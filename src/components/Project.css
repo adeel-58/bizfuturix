@@ -73,7 +73,7 @@
 
 .project-card1 {
     background-color: #ffffff;
-    border: 1px solid #707070;
+    
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     height: 350px; /* Fixed height as requested */
     width: 350px; /* Fixed width as requested */
@@ -124,7 +124,7 @@
 
 .project-overlay-title1 {
     color: #ffffff; /* White text for the title */
-    font-size: 1.6rem; /* Slightly larger font size for prominence */
+    font-size: 18px; /* Slightly larger font size for prominence */
     font-weight: 700; /* Bold text */
     text-align: center;
     padding: 10px;

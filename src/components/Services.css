@@ -1,4 +1,3 @@
-/* Services.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
 .services-container {
    
@@ -42,12 +41,13 @@
 }
 
 .cards-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Default to single column */
-    gap: 40px; /* gap-8 */
-    margin-bottom: 48px; /* mb-12 */
-    max-width: 100%; /* Max width for the grid */
+    display: flex; /* Changed from grid to flex for better sibling control */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* consistent spacing */
+    transition: all 0.3s ease;
 }
+
 
 @media (min-width: 768px) { /* md breakpoint */
     .cards-grid {
@@ -58,26 +58,33 @@
 
 .service-card {
     background-color: #ffffff;
-    border: 1px solid #707070; /* Updated border color */
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    height: 350px; /* Fixed height as requested */
-    width: 350px; /* Fixed width as requested */
+    border: 1px solid #707070;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    height: 350px;
+    width: 350px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    padding: 24px; /* Default padding */
-    padding-top: 70px; /* Adjusted padding-top to account for the circle's new size and position */
-    position: relative; /* Essential for positioning the absolute icon-circle */
-    /* overflow: hidden; -- REMOVED to make the circle fully visible */
+    align-items: center;
+    padding: 40px;
+    padding-top: 70px;
+    position: relative;
     box-sizing: border-box;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, z-index 0.3s;
+    z-index: 1;
+    transform: scale(1); /* Ensure default scale is 1 */
+}
+
+/* Scale hovered card more */
+.cards-grid:hover .service-card:hover {
+    transform: scale(1.08);
+    z-index: 5;
+}
+
+/* Slightly shrink non-hovered cards */
+.cards-grid:hover .service-card:not(:hover) {
+    transform: scale(0.95);
     
 }
-
-.service-card:hover {
-    transform: translateY(-5px); /* Subtle lift on hover */
-}
-
 .icon-circle {
       width: 96px; /* Retained 96px as per current state */
     height: 96px; /* Retained 96px as per current state */
@@ -94,11 +101,31 @@
     /* margin-bottom: 24px; -- Not relevant for absolute positioning */
 }
 
-.card-title {
+.card-title1 {
     font-size: 18px; /* text-xl */
+    width: 200px;
     font-weight: 600; /* font-semibold */
     color: #383838; /* gray-900 */
     margin-bottom: 12px; /* mb-3 */
+    margin-right: 207px;
+    
+}
+.card-title2 {
+    font-size: 18px; /* text-xl */
+    width: 200px;
+    font-weight: 600; /* font-semibold */
+    color: #383838; /* gray-900 */
+    margin-bottom: 12px; /* mb-3 */
+    margin-right: 126px;
+    
+}
+.card-title3 {
+    font-size: 18px; /* text-xl */
+    width: 200px;
+    font-weight: 600; /* font-semibold */
+    color: #383838; /* gray-900 */
+    margin-bottom: 12px; /* mb-3 */
+    margin-right: 181px;
     
 }
 
@@ -109,7 +136,7 @@
   list-style: none;
   padding-left: 0;
   margin: 0;
-  font-size: 17px;
+  font-size: 15px;
   justify-content: center;
 }
 
@@ -129,7 +156,7 @@
   font-size: 12px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  margin: 20px auto 0 auto; 
+  margin: 45px auto 0 auto; 
 }
 
 .start-project-button:hover {

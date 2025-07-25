@@ -15,6 +15,7 @@
     color: #383838; /* Dark gray text */
     text-align: center;
       padding-bottom: 115px;
+      margin-top: 50px;
 }
 
 .talk-to-us-header {
@@ -84,7 +85,7 @@
 
 .form-input.textarea {
     resize: vertical; /* Allow vertical resizing for textarea */
-    min-height: 80px; /* Minimum height for message area */
+    min-height: 150px; /* Minimum height for message area */
      font-weight: 500;
 }
 

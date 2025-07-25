@@ -76,24 +76,29 @@
 .review-card {
     background-color: #ffffff;
     color: #383838;
-    
     padding: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column; /* Keep as column to stack header and full text */
+    flex-direction: column;
     align-items: flex-start;
     text-align: left;
     position: relative;
-    transition: transform 0.3s ease-in-out;
-    height: 110px; /* Set fixed height as requested */
-    box-sizing: border-box; /* Include padding and border in the total height */
-    overflow: hidden; /* Hide overflowing text if it exceeds the fixed height */
+    transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
+    height: 110px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: scale(1); /* Ensure default scale */
+    z-index: 1;
 }
 
-.review-card:hover {
-    transform: scale(1.02); /* Subtle scale on hover */
+.right-section:hover .review-card:hover {
+    transform: scale(1.06);
+    z-index: 2;
 }
-
+.right-section:hover .review-card:not(:hover) {
+    transform: scale(0.95);
+   
+}
 .review-header {
     display: flex;
     align-items: center;
@@ -137,7 +142,7 @@
 }
 
 .review-text-snippet {
-    font-size: 0.9rem;
+    font-size: 15px;
     color: #6b7280;
     /* This snippet is now the primary text shown in the fixed height card */
     display: block; /* Make it visible */
