@@ -235,9 +235,12 @@
 }
 
 .start-project-button:hover {
-    background-color: #ea580c;
-    /* hover:bg-orange-600 */
+   background-color: #383838;
+   color: white;
+  
 }
+
+
 .icon-svg {
     color: white;
     width: 40px;

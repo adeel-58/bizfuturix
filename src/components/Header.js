@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom'; // 🔁 React Router
 import './Header.css';
 
 import logoWhite from '../icons/logo.svg';
@@ -15,12 +16,11 @@ import twIcon from '../icons/tw.svg';
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState('HOME');
+  const location = useLocation(); // 🔄 Track active route
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 100;
-      setScrolled(isScrolled);
+      setScrolled(window.scrollY > 100);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -33,10 +33,10 @@ const Header = () => {
 
   const menuItems = [
     { label: 'HOME', href: '/' },
-    { label: 'OUR PROJECTS', href: '/p' },
-    { label: 'SERVICES', href: '/' },
-    { label: 'ABOUT US', href: '/' },
-    { label: 'CONTACT', href: '/' },
+    { label: 'OUR PROJECTS', href: '/our-projects' },
+    { label: 'SERVICES', href: '/services' },
+    { label: 'ABOUT US', href: '/about-us' },
+    { label: 'CONTACT', href: '/contact-us' },
   ];
 
   return (
@@ -67,13 +67,17 @@ const Header = () => {
       )}
 
       <div className="header-bottom">
-        <img
-          src={scrolled ? logoBlack : logoWhite}
-          alt="Bizfuturix Logo"
-          className="logo"
-        />
+        <Link to="/">
+          <img
+            src={scrolled ? logoBlack : logoWhite}
+            alt="Bizfuturix Logo"
+            className="logo"
+          />
+        </Link>
         <div className="right-controls">
-          <button className="project-btn">START A PROJECT</button>
+          <Link to="/start-a-project">
+            <button className="project-btn">START A PROJECT</button>
+          </Link>
           <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
             <span></span>
             <span></span>
@@ -88,23 +92,20 @@ const Header = () => {
             {menuItems.map((item, index) => (
               <li
                 key={item.label}
-                className={activeItem === item.label ? 'active' : ''}
+                className={location.pathname === item.href ? 'active' : ''}
                 style={{ animationDelay: `${0.1 + index * 0.05}s` }}
               >
-                <a
-                  href={item.href}
-                  onClick={() => setActiveItem(item.label)}
+                <Link
+                  to={item.href}
+                  onClick={() => setMenuOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
-
-          {/* Add this logo image */}
-          <img src={menubackground} alt="Logo" className="fullscreen-menu-logo" />
+          <img src={menubackground} alt="Menu Background" className="fullscreen-menu-logo" />
         </div>
-
       )}
     </header>
   );

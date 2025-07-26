@@ -77,7 +77,10 @@
   font-weight: 600;
   margin: 20px auto 0 auto; 
 }
-
+.read-more-btn:hover{
+  background-color: white;
+  color: #383838;
+}
 /* Responsive */
 @media (max-width: 768px) {
   .hero {

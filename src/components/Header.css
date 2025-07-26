@@ -129,7 +129,19 @@
   cursor: pointer;
   margin-top: 0;
 }
+.project-btn:hover{
+  background-color: white;
+  color: #383838;
+}
+.header-container.scrolled .project-btn {
+  background-color: #ff6a00;
+  color: white;
 
+}
+.header-container.scrolled .project-btn:hover {
+  background-color: #383838;
+  color: white;
+}
 /* ----------------------------------------
    📌 HAMBURGER MENU
 ---------------------------------------- */
@@ -300,4 +312,8 @@
   .header-bottom {
     padding: 20px 20px;
   }
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }

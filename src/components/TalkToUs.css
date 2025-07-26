@@ -109,7 +109,8 @@
 }
 
 .send-message-button:hover {
-    background-color: #ea580c;
+    background-color: #383838;
+   color: white;
 }
 
 /* Responsive adjustments */
