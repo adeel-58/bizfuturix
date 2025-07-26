@@ -33,7 +33,7 @@ const Header = () => {
 
   const menuItems = [
     { label: 'HOME', href: '/' },
-    { label: 'OUR PROJECTS', href: '/our-projects' },
+    { label: 'PROJECTS', href: '/our-projects' },
     { label: 'SERVICES', href: '/services' },
     { label: 'ABOUT US', href: '/about-us' },
     { label: 'CONTACT', href: '/contact-us' },
@@ -88,23 +88,26 @@ const Header = () => {
 
       {menuOpen && (
         <div className="fullscreen-menu">
-          <ul className="menu-list">
-            {menuItems.map((item, index) => (
-              <li
-                key={item.label}
-                className={location.pathname === item.href ? 'active' : ''}
-                style={{ animationDelay: `${0.1 + index * 0.05}s` }}
-              >
-                <Link
-                  to={item.href}
-                  onClick={() => setMenuOpen(false)}
+          <div class="menu-wrapper">
+            <ul className="menu-list">
+              {menuItems.map((item, index) => (
+                <li
+                  key={item.label}
+                  className={location.pathname === item.href ? 'active' : ''}
+                  style={{ animationDelay: `${0.1 + index * 0.05}s` }}
                 >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <img src={menubackground} alt="Menu Background" className="fullscreen-menu-logo" />
+                  <Link
+                    to={item.href}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <img src={menubackground} alt="Menu Background" className="fullscreen-menu-logo" />
+          </div>
+
         </div>
       )}
     </header>
