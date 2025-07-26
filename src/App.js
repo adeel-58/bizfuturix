@@ -10,7 +10,7 @@ import Project from './components/Project';
 import ClientLove from './components/ClientLove';
 import Logos from './components/Logos';
 import TalkToUs from './components/TalkToUs';
-import ScrollingCardsVertical  from './components/ScrollingCards';
+
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
       <ClientLove/>
       <Logos/>
       <TalkToUs/>
-      <ScrollingCardsVertical/>
+  
     </div>
   );
 }
