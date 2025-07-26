@@ -10,9 +10,9 @@ const Services = () => {
     return (
         <div className="services-container">
             <p className="welcome-text">Welcome to BIZFUTURIX</p>
-            <h1 className="agency-title">Digital Creative Agency</h1>
+            <h1 className="agency-title">Design & Advertising Agency</h1>
             <p className="agency-description">
-               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </p>
 
             <div className="cards-grid">
@@ -22,7 +22,11 @@ const Services = () => {
                         <img src={DesignIcon} alt="Design" className="icon-svg" />
                     </div>
                     <h3 className="card-title1">Design</h3>
-                    <p className="card-description">We craft compelling visual identities through logo design, brand assets, and marketing materials. From social media content to posters and packaging, we deliver consistent, high-quality visuals that elevate your brand.</p>
+                    <ul className="card-description">
+                        <li>Logo design and brand identity</li>
+                        <li>Social media graphics and posters</li>
+                        <li>Marketing material and packaging</li>
+                    </ul>
                 </div>
 
                 {/* Web Development Card */}
@@ -31,7 +35,11 @@ const Services = () => {
                         <img src={DevelopmentIcon} alt="Development" className="icon-svg" />
                     </div>
                     <h3 className="card-title2">Web Development</h3>
-                    <p className="card-description"> We build modern, scalable web applications using Django and React. From custom platforms to WordPress sites, we also integrate AI-powered chatbots and intelligent agents to automate support and enhance user experience.</p>
+                    <ul className="card-description2">
+                        <li>Custom Django and React apps</li>
+                        <li>WordPress and CMS solutions</li>
+                        <li>AI-powered chatbot integration</li>
+                    </ul>
                 </div>
 
                 {/* Marketing Card */}
@@ -40,7 +48,11 @@ const Services = () => {
                         <img src={CodingIcon} alt="Marketing" className="icon-svg" />
                     </div>
                     <h3 className="card-title3">Marketing</h3>
-                    <p className="card-description"> We help brands grow through targeted digital strategies, including Instagram campaigns, paid advertising, and conversion optimization. Our approach is data-driven and focused on generating real business results.</p>
+                    <ul className="card-description">
+                        <li>Instagram and paid ad campaigns</li>
+                        <li>Conversion rate optimization</li>
+                        <li>Analytics and insights</li>
+                    </ul>
                 </div>
             </div>
 

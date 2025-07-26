@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+
+.vertical-scroll-wrapper {
+    height: 500px; /* container height */
+    overflow: hidden;
+    background-color: #f4f4f4;
+    padding: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-scroll-track {
+    display: flex;
+    flex-direction: column;
+    animation: scroll-down 20s linear infinite;
+    width: 100%;
+    align-items: center;
+}
+
+/* Card Styles */
+.vertical-card {
+    height: 120px;
+    width: 300px;
+    background-color: #ffffff;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.vertical-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.vertical-card p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+}
+
+/* Hover Effect */
+.vertical-card:hover {
+    transform: scale(1.05);
+}
+
+/* Pause animation on hover */
+.vertical-scroll-wrapper:hover .vertical-scroll-track {
+    animation-play-state: paused;
+}
+
+/* Vertical scrolling animation */
+@keyframes scroll-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}

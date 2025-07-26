@@ -189,7 +189,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 80px;
+  padding-left: 255px;
   transition: all 0.4s ease;
   
 }
@@ -236,7 +236,7 @@
 .menu-list a {
   text-decoration: none;
   color: white;
-  font-size: 35.71px;
+  font-size: 70px;
   font-weight: 600;
   padding-bottom: 6px;
   display: inline-block;
