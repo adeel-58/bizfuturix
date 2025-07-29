@@ -114,7 +114,7 @@
 }
 
 .project-btn {
-  background-color: #ff6a00;
+  background-color: #FF6B00;
   color: white;
   border: none;
   border-radius: 30px;
@@ -134,7 +134,7 @@
   color: #383838;
 }
 .header-container.scrolled .project-btn {
-  background-color: #ff6a00;
+  background-color: #FF6B00;
   color: white;
 
 }
@@ -290,16 +290,6 @@
   animation: highlightSlide 0.6s ease forwards;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* ----------------------------------------
    📌 KEYFRAMES
 ---------------------------------------- */
@@ -352,3 +342,120 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------
+   📌 Mobile Responsive 
+---------------------------------------- */
+/* 📱 MOBILE HEADER STYLE (Max-width 768px) */
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 11px;
+    padding: 0px 0;
+  }
+
+ .contact-info {
+  width: 100%;
+  max-width: 100%;
+  
+  padding: 8px 16px;
+  background-color: white;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 11px;
+  font-weight: 600;
+  color: #353535;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.contact-info span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.contact-info img {
+  height: 13px;
+  width: 13px;
+  object-fit: contain;
+}
+
+  .social-links {
+    display: none; /* 🔇 hide socials on mobile */
+  }
+
+  .header-bottom {
+    padding: 18px 20px;
+  }
+
+  .logo {
+    height: 35px;
+  }
+
+  .project-btn {
+    display: none; /* 🔇 hide project button on mobile */
+  }
+
+  .hamburger {
+    height: 20px;
+    width: 35px;
+  }
+
+  .hamburger span {
+    height: 4px;
+  }
+
+  .fullscreen-menu-logo {
+    display: none; /* 🔇 hide background logo on mobile menu */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

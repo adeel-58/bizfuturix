@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom'; // 🔁 React Router
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 import logoWhite from '../icons/logo.svg';
@@ -40,8 +40,12 @@ const Header = () => {
   ];
 
   return (
-    <header className={`header-container ${scrolled ? 'scrolled' : ''}`}>
-      {!scrolled && (
+    <header
+      className={`header-container ${location.pathname === '/' ? (scrolled ? 'scrolled' : '') : 'scrolled'
+        }`}
+    >
+
+      {location.pathname === '/' && !scrolled && (
         <div className="header-top">
           <div className="contact-info">
             <img src={phoneIcon} alt="Phone" />
@@ -69,10 +73,15 @@ const Header = () => {
       <div className="header-bottom">
         <Link to="/">
           <img
-            src={scrolled ? logoBlack : logoWhite}
+            src={
+              location.pathname === '/' && !scrolled
+                ? logoWhite
+                : logoBlack
+            }
             alt="Bizfuturix Logo"
             className="logo"
           />
+
         </Link>
         <div className="right-controls">
           <Link to="/start-a-project">

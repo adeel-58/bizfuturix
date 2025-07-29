@@ -1,0 +1,167 @@
+/* ContactUs.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'); /* For form labels/inputs */
+
+
+.contact-us-container {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    padding: 10% 0%;
+    box-sizing: border-box;
+    background-color: #ffffff; /* White background */
+    color: #383838; /* Dark text */
+}
+
+.contact-content-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack vertically on small screens */
+    width: 100%;
+    max-width: 1000px; /* Max width for the entire section content */
+    background-color: #ffffff;
+    border-radius: 10px; /* Slight rounded corners for the whole wrapper */
+    overflow: hidden; /* Ensures image and form content stay within bounds */
+}
+
+@media (min-width: 768px) { /* Desktop layout */
+    .contact-content-wrapper {
+        flex-direction: row; /* Side-by-side on larger screens */
+        min-height: 500px; /* Minimum height for desktop layout */
+    }
+}
+
+.contact-left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent overflow issues */
+    background-color: #ffffff;
+    position: relative;
+}
+
+.contact-background-image {
+    width: 130%;                   /* 🔸 Bigger image */
+    max-width: none;               /* 🔸 Remove size cap */
+    transform: translateX(-10%);   /* 🔸 Move image to the left */
+    height: auto;
+    object-fit: contain;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+}
+
+
+.contact-right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #ffffff;
+    text-align: left; /* Align text to the left within this section */
+}
+
+.contact-heading {
+    font-size: 25px;
+    font-weight: 700;
+    color: #FF6B00 ; /* Orange color for the heading */
+    margin-bottom: 10px;
+}
+
+.contact-subtext {
+    font-size: 17px;
+    color: #6b7280;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.contact-form {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Space between form groups */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    color: #383838;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #d1d5db; /* Thin bottom border */
+    font-size: 17px;
+    color: #383838;
+    background-color: transparent;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-bottom-color: #FF6B00; /* Orange border on focus */
+}
+
+.form-input.textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.contact-us-start-project-button {
+    background-color: #FF6B00;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    width: 220px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin: 20px 0 0 auto; /* 👈 moves the button to the right */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us-start-project-button:hover {
+    background-color: #383838;
+    color: white;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+    .contact-content-wrapper {
+        box-shadow: none; /* Remove shadow on small screens for cleaner look */
+    }
+    .contact-right-section {
+        padding: 30px 20px;
+    }
+    .contact-heading {
+        font-size: 1.5rem;
+    }
+    .contact-subtext {
+        font-size: 0.9rem;
+    }
+    .contact-form {
+        gap: 20px;
+    }
+    .contact-us-start-project-button {
+        width: 180px;
+        height: 45px;
+        font-size: 11px;
+    }
+}

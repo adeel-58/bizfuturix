@@ -8,8 +8,15 @@ import {
 
 import './App.css';
 import Header from './components/Header';
+import Footer from './components/Footer';
+
+
 import HomePage from './pages/HomePage';
 import BouncingLoader from './components/BouncingLoader';
+import AboutUsPage from './pages/AboutUsPage';
+import ContactUsPage from './pages/ContactUsPage';
+import OurProjectsPage from './pages/OurProjectsPage';
+
 
 function AppWrapper() {
   const [loading, setLoading] = useState(false);        // Controls loader visibility
@@ -42,10 +49,14 @@ function AppWrapper() {
       {pageVisible && (
         <>
           <Header />
+          
           <Routes>
             <Route path="/" element={<HomePage />} />
-            {/* Add more routes here */}
+            <Route path="/about-us" element={<AboutUsPage />} />
+            <Route path="/contact-us" element={<ContactUsPage />} />
+            <Route path="/our-projects" element={<OurProjectsPage />} />
           </Routes>
+          <Footer />
         </>
       )}
     </>

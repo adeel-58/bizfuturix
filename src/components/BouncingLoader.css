@@ -15,7 +15,7 @@
 .sk-child {
   width: 18px;
   height: 18px;
-  background-color: #ff6a00;
+  background-color: #FF6B00;
   border-radius: 100%;
   display: inline-block;
   animation: sk-three-bounce 0.9s ease-in-out infinite both; /* was 1.4s */

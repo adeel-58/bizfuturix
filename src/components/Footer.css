@@ -1,0 +1,153 @@
+.footer-container {
+    background-color: #383838;
+    padding: 40px 20px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    margin-top: 0px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    gap: 300px; /* More space between left and right sections */
+}
+
+/* Left Section */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 280px;
+    flex-shrink: 0;
+}
+
+.footer-logo img {
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.contact-details p {
+    margin: 10px 0;
+    font-size: 17px;
+    color: #ddd;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.social-icon-1 {
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.social-icon-1:hover {
+    transform: scale(1.1);
+}
+
+.social-icon-img-1 {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* Right Section (Services, Learn, Help & Support) */
+.footer-right {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Equal spacing between columns */
+    flex-wrap: wrap;
+}
+
+.footer-card {
+    min-width: 180px;
+    width: 200px;
+}
+
+/* Section Titles & Links */
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.help-support-title {
+    margin-top: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .footer-left, .footer-right {
+        width: 100%;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-card {
+        width: 100%;
+    }
+
+    .footer-links a {
+        font-size: 0.875rem;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+}

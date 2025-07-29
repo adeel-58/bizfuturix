@@ -80,7 +80,7 @@
 }
 
 .form-input:focus {
-    border-bottom-color: #f97316; /* Orange border on focus */
+    border-bottom-color: #FF6B00; /* Orange border on focus */
 }
 
 .form-input.textarea {
@@ -90,7 +90,7 @@
 }
 
 .send-message-button {
-    background-color: #ff6a00;
+    background-color: #FF6B00;
     color: white;
     border: none;
     border-radius: 30px;
@@ -102,7 +102,7 @@
     font-weight: bold;
     cursor: pointer;
     font-size: 17px;
-    font-family: 'Montserrat', sans-serif; /* Assuming Montserrat is desired for buttons */
+    font-family: 'Roboto', sans-serif; /* Assuming Montserrat is desired for buttons */
     font-weight: 600;
     margin: 50px auto 0 auto; /* Center button and add top margin */
     transition: background-color 0.3s ease;
@@ -159,7 +159,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #ff6a00;
+    background-color: #FF6B00;
     transform: translateX(-100vw);
 }
 

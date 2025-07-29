@@ -29,14 +29,14 @@
 }
 
 .orange-dot {
-  color: #ff6a00;
+  color: #FF6B00;
   font-size: 60px;
   margin-right: 10px;
   line-height: 1;
 }
 
 .orange-text {
-  color: #ff6a00;
+  color: #FF6B00;
   font-size: 50px;
   font-weight: 600;
   line-height: 1;
@@ -61,7 +61,7 @@
 
 .read-more-btn {
   
-  background-color: #ff6a00;
+  background-color: #FF6B00;
   color: white;
   border: none;
   border-radius: 30px;
@@ -135,4 +135,53 @@
 }
 .animate-delay-5 {
   animation-delay: 1.4s;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 80px;
+    height: 650px; /* 382pt converted to px */
+    text-align: center;
+    padding-bottom: 50px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-content {
+    padding-top: 50px; /* adjust if needed */
+  }
+
+  .orange-text {
+    font-size: 46px; /* 35pt */
+  }
+
+  .hero h1 {
+    font-size: 27px;  /* 20pt */
+    line-height: 1.4;
+  }
+
+  .hero p {
+    font-size: 23px;  /* 17pt */
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+
+  .read-more-btn {
+    padding: 8px 20px;
+    width: 180px;
+    height: 45px;
+    font-size: 15px;
+  }
+  .hero-content {
+  max-width: 90%;
+}
+
 }
