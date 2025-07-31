@@ -72,9 +72,17 @@
   background-color: #ffffff;
   text-align: center;
 }
+.project-card {
+  aspect-ratio: 1 / 1; /* new CSS property */
+  width: 90%;
+  max-width: 350px;
+  overflow: hidden;
+}
 
-
-
-
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 }
