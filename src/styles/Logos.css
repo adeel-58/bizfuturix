@@ -1,0 +1,42 @@
+/* Logos.css */
+
+.logos-section-container {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    padding: 90px 20px; /* Add some padding around the section */
+    background-color: #ffffff; /* A light background to make the dark logos stand out */
+    min-height: 200px; /* Minimum height for the section */
+    box-sizing: border-box;
+   
+}
+
+.client-logos-image {
+    max-width: 65%; /* Ensure the image is responsive and fits within its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the image */
+    padding-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+
+.logos-section-container {
+    padding: 0px 0px;
+    display: flex;
+    justify-content: flex-start; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    background-color: #ffffff; /* A light background to make the dark logos stand out */
+    min-height: 0px; /* Minimum height for the section */
+    box-sizing: border-box;
+    
+}
+.client-logos-image {
+    max-width: 120%;
+    padding-bottom: 0px;
+}
+
+
+
+
+}

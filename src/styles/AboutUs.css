@@ -1,0 +1,124 @@
+.aboutus-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10vh 8% 0 8%; /* 👈 Top padding ensures it's away from header */
+  box-sizing: border-box;
+}
+
+.aboutus-background {
+  position: absolute;
+  bottom: 0vh;           /* Pushes slightly below */
+  right: 0;
+  width: 100vw;            /* Scales image with screen */
+  max-width: 1000px;       /* Prevents it from being too large */
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Content on the left side */
+.aboutus-content {
+  max-width: 600px;
+  z-index: 2;
+  color: #383838;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 20px;
+}
+
+/* Subheading style */
+.aboutus-subheading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #383838;
+  margin-bottom: 12px;
+}
+
+/* Heading style */
+.aboutus-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #FF6B00;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+/* Paragraph style */
+.aboutus-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #383838;
+  margin-bottom: 18px;
+}
+
+/* CTA style */
+.aboutus-cta {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #FF6B00;
+}
+
+.aboutus-cta span {
+  font-weight: 600;
+}
+
+
+
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .aboutus-container {
+    height: 800px;
+    padding: 0px 5% 0 5%;
+    margin-top: 10px;
+  }
+
+  .aboutus-heading {
+    font-size: 23px;
+    margin-bottom: 40px;
+    
+  }
+  .aboutus-subheading {
+    font-size: 17px;
+    
+    
+  }
+
+  .aboutus-paragraph {
+    margin-top: -10px;
+    font-size: 16px;
+  }
+
+  .aboutus-background {
+    width: 100vw;
+    bottom: -20px;
+    
+    
+  }
+
+  .aboutus-content {
+    max-width: 90%;
+    margin-top: -65px;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1600px) {
+  .aboutus-background {
+    right: 5vw;
+    width: 45vw;
+  }
+
+  .aboutus-container {
+    padding-top: 100px;
+  }
+}
+
+
+

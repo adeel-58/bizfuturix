@@ -1,6 +1,6 @@
 // OurProjects.js
 import React from "react";
-import "./OurProjects.css";
+import "../styles/OurProjects.css";
 
 import img1 from "../assets/images/img1.jpg";
 import img2 from "../assets/images/img2.jpg";

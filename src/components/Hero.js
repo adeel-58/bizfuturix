@@ -1,5 +1,7 @@
 import React from 'react';
-import './Hero.css';
+import '../styles/Hero.css';
+import { Link } from 'react-router-dom';
+
 import backgroundImage from '../assets/images/herobackground.png';
 
 const Hero = () => {
@@ -26,9 +28,9 @@ const Hero = () => {
   WE DESIGN. WE ADVERTISE. YOU GROW
 </p>
       
- <button className="read-more-btn animated-text animate-delay-5">
+ <Link to="/about-us" className="read-more-btn animated-text animate-delay-5">
   Read more
-</button>
+</Link>
 
 </div>
     </section>

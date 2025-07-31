@@ -1,5 +1,5 @@
 import React from 'react';
-import './BouncingLoader.css';
+import '../styles/BouncingLoader.css';
 
 const BouncingLoader = ({ show }) => {
   if (!show) return null;

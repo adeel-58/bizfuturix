@@ -1,0 +1,298 @@
+/* ClientLove.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap'); /* For button font */
+
+
+.clientlove-container {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background-color: #383838; /* Dark background color from image */
+    color: #ffffff; /* White text for contrast */
+
+    /* Background image properties */
+    background-image: url('../assets/images/brownback.svg'); /* Path to your SVG */
+    background-repeat: no-repeat;
+    background-position: right center; /* Aligns the image to the right and vertically centers it */
+    background-size: contain; /* Ensures the whole image is visible within the container */
+}
+
+.clientlove-content {
+    display: flex;
+    flex-direction: column; /* Stack on small screens */
+    gap: 40px;
+    max-width: 1200px; /* Max width for the content area */
+    width: 100%;
+    align-items: flex-start; /* Align items to the start in column layout */
+}
+
+@media (min-width: 1024px) { /* Desktop layout */
+    .clientlove-content {
+        flex-direction: row; /* Side-by-side on larger screens */
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to left */
+    justify-content: center; /* Center content vertically if space allows */
+    padding-right: 20px; /* Spacing from right section */
+    /* Removed text-align: left; as it's not needed for just an image */
+}
+
+/* New style for the single logo image */
+.single-client-logo {
+    width: 748px; /* Fixed width as requested */
+    height: 618px; /* Fixed height as requested */
+    object-fit: contain; /* Ensures the entire image is visible within its dimensions */
+    max-width: 100%; /* Ensure it's responsive and shrinks on smaller screens */
+    height: auto; /* Allow height to adjust proportionally when shrinking */
+}
+
+/* Removed styles for elements no longer in ClientLove.js left-section */
+/* .quote-image-icon, .section-title, .section-description, .logos-grid, .contact-button */
+/* If these are used elsewhere, keep their styles. For this request, they are removed from this section's context. */
+
+/* ClientLove.css */
+
+/* ... (previous styles for .clientlove-container, .clientlove-content, .left-section, etc.) ... */
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Gap between review cards */
+    width: 100%; /* Ensure it takes full width on small screens */
+}
+
+.review-card {
+    background-color: #ffffff;
+    color: #383838;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
+    height: 110px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: scale(1); /* Ensure default scale */
+    z-index: 1;
+}
+
+.right-section:hover .review-card:hover {
+    transform: scale(1.06);
+    z-index: 2;
+}
+.right-section:hover .review-card:not(:hover) {
+    transform: scale(0.95);
+   
+}
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Reduced margin to fit within 110px height */
+    width: 100%;
+}
+
+.avatar-circle {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #d1d5db; /* Added border as seen in the image */
+    border-radius: 50%;
+    background-color: transparent; /* Changed to transparent as per image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-right: 15px;
+    flex-shrink: 0; /* Prevent avatar from shrinking */
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Ensure image inside is also rounded */
+}
+
+.reviewer-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reviewer-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 2px; /* Adjusted margin */
+    color: #383838;
+}
+
+.review-text-snippet {
+    font-size: 15px;
+    color: #6b7280;
+    /* This snippet is now the primary text shown in the fixed height card */
+    display: block; /* Make it visible */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
+    max-width: calc(100% - 80px); /* Adjust max-width to leave space for avatar and quote icon */
+}
+
+/* Updated quote-icon-right to use background image */
+.quote-icon-right {
+    width: 40px; /* Adjust size of the image */
+    height: 30px; /* Adjust size of the image */
+    background-image: url('../assets/images/invertedcoma.png'); /* Path to your inverted coma image */
+    background-size: contain; /* Ensure the image fits */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto; /* Pushes it to the far right */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.full-review-text {
+    /* This text will likely be hidden due to fixed height and overflow: hidden on .review-card */
+    display: none; /* Hide the full text as only snippet is visible in fixed height card */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Extend left section for logo + button + text */
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 40px;
+    color: #ffffff;
+}
+
+.comma-icon {
+    width: 80px;
+    height: auto;
+    margin-bottom: -35px;
+}
+
+.client-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.client-description {
+    font-size: 1.1rem;
+    max-width: 480px;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+/* Logos section */
+.client-logos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    flex-wrap: nowrap; /* logos stay in one line */
+    overflow-x: auto;   /* prevent layout breaking on smaller screens */
+    margin-bottom: 40px;
+}
+
+.client-logo {
+    width: 100px; /* smaller size */
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* make logos white on dark background */
+    transition: transform 0.2s ease-in-out;
+}
+
+.client-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Provided button style */
+.start-project-button2 {
+    background-color: #fafafa;
+    color: #FF6B00;
+    border: none;
+    border-radius: 30px;
+    width: 220px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+    margin-left: 0; /* Ensure it's left-aligned */
+}
+
+.start-project-button2:hover{
+background-color: #FF6B00;
+   color: #fafafa;
+}
+
+
+
+/* Responsive adjustments for review cards */
+@media (max-width: 767px) {
+    .review-card {
+        padding: 15px; /* Slightly less padding on smaller screens */
+        height: 100px; /* Adjust height for smaller screens if needed */
+    }
+    .avatar-circle {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    .reviewer-name {
+        font-size: 1.1rem;
+    }
+    .quote-icon-right {
+        width: 35px;
+        height: 25px;
+    }
+    .review-text-snippet {
+        font-size: 0.85rem;
+    }
+    .client-logos {
+        display: none !important;
+    }
+    
+  .clientlove-container {
+    padding-bottom: 60px;
+  }
+    
+}
+
+
+.mobile-contact-button{
+    margin: 20px auto 0px auto;
+}

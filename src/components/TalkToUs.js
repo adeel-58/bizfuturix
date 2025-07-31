@@ -1,19 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './TalkToUs.css';
+import '../styles/TalkToUs.css';
 
 const TalkToUs = () => {
     const sectionRef = useRef(null);
     const [animateCircles, setAnimateCircles] = useState(false);
+    const [showNotification, setShowNotification] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
                     setAnimateCircles(true);
-                    observer.unobserve(entry.target); // Run once
+                    observer.unobserve(entry.target);
                 }
             },
-            { threshold: 0.08 } // Trigger when 50% is visible
+            { threshold: 0.08 }
         );
 
         if (sectionRef.current) {
@@ -23,8 +24,38 @@ const TalkToUs = () => {
         return () => observer.disconnect();
     }, []);
 
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        formData.append("access_key", "e6a5844f-582c-46d9-ad96-2ff3831b7552");
+
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        const res = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body: json,
+        }).then((res) => res.json());
+
+        if (res.success) {
+            setShowNotification(true);
+            setTimeout(() => setShowNotification(false), 3000);
+            event.target.reset();
+        }
+    };
+
     return (
         <div className="talk-to-us-container" ref={sectionRef}>
+            {showNotification && (
+                <div className="notification-banner">
+                    Your message has been sent successfully!
+                </div>
+            )}
+
             <div className="talk-to-us-header">
                 <div className={`overlapping-circles ${animateCircles ? 'animate-circles' : ''}`}>
                     <div className="circle circle1"></div>
@@ -35,10 +66,10 @@ const TalkToUs = () => {
             </div>
 
             <p className="talk-to-us-description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Have a project in mind? Let’s bring it to life. we’re just a message away.
             </p>
 
-            <form className="contact-form">
+            <form className="contact-form" onSubmit={onSubmit}>
                 <div className="form-group">
                     <label htmlFor="name" className="form-label">Name</label>
                     <input type="text" id="name" name="name" className="form-input" />

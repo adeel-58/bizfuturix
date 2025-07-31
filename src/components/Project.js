@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import './Project.css';
-
+import '../styles/Project.css';
+import { Link } from 'react-router-dom';
 import { ReactComponent as ArrowRight } from '../icons/arrow.svg';
 
 const Project = () => {
@@ -58,8 +58,10 @@ const Project = () => {
         <div className="projects-container1">
             <h1 className="agency-title1">Our projects</h1>
             <p className="agency-description1">
-                Explore a selection of our recent projects, showcasing our expertise in design, web development, and marketing. Each project reflects our commitment to delivering innovative and effective digital solutions.
-            </p>
+                We don’t just deliver projects, we build bold, scroll-stopping brands.
+From standout logos to high-performing websites, our work drives results.
+Take a look at how we turn big ideas into powerful visuals.
+                </p>
 
             <div className="carousel-wrapper">
                 <button className="scroll-button left" onClick={() => scroll('left')}>
@@ -87,9 +89,9 @@ const Project = () => {
                 </button>
             </div>
 
-            <button className="start-project-button1">
-                View all projects
-            </button>
+            <Link to="/our-projects" className="start-project-button1">
+  View all projects
+</Link>
         </div>
     );
 };

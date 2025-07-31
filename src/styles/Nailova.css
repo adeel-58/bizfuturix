@@ -1,0 +1,20 @@
+/* src/styles/Nailova.css */
+
+.nailova-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    margin-top: 60px;
+    box-sizing: border-box;
+    padding: 0px 0px;
+}
+
+.nailova-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}

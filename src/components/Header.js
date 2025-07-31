@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import './Header.css';
+import '../styles/Header.css';
 
 import logoWhite from '../icons/logo.svg';
 import logoBlack from '../icons/blacklogo.svg';
@@ -11,7 +11,7 @@ import emailIcon from '../icons/email.svg';
 
 import fbIcon from '../icons/fb.svg';
 import instaIcon from '../icons/insta.svg';
-import twIcon from '../icons/tw.svg';
+import twIcon from '../icons/linkdin.svg';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -54,17 +54,17 @@ const Header = () => {
             <span>bizfuturix@gmail.com</span>
           </div>
           <div className="social-links">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-link">
+            <a href="https://www.facebook.com/profile.php?id=61575166431210" target="_blank" rel="noopener noreferrer" className="social-link">
               <img src={fbIcon} alt="Facebook" className="social-icon" />
               <span>Facebook</span>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-link">
+            <a href="https://www.instagram.com/bizfuturix/" target="_blank" rel="noopener noreferrer" className="social-link">
               <img src={instaIcon} alt="Instagram" className="social-icon" />
               <span>Instagram</span>
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link">
+            <a href="https://linkedin.com/company/bizfuturix" target="_blank" rel="noopener noreferrer" className="social-link">
               <img src={twIcon} alt="Twitter" className="social-icon" />
-              <span>Twitter</span>
+              <span>Linkedin</span>
             </a>
           </div>
         </div>

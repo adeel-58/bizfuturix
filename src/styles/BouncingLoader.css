@@ -1,0 +1,42 @@
+.sk-three-bounce {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  text-align: center;
+  z-index: 9999;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.sk-child {
+  width: 18px;
+  height: 18px;
+  background-color: #FF6B00;
+  border-radius: 100%;
+  display: inline-block;
+  animation: sk-three-bounce 0.9s ease-in-out infinite both; /* was 1.4s */
+  vertical-align: middle;
+}
+
+.sk-bounce-1 {
+  animation-delay: -0.2s; /* adjusted from -0.32s */
+}
+.sk-bounce-2 {
+  animation-delay: -0.1s; /* adjusted from -0.16s */
+}
+.sk-bounce-3 {
+  animation-delay: 0s;
+}
+
+@keyframes sk-three-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}

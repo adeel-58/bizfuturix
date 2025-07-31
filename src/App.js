@@ -9,6 +9,7 @@ import {
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Nailova from './components/Nailova';
 
 
 import HomePage from './pages/HomePage';
@@ -51,10 +52,14 @@ function AppWrapper() {
           <Header />
           
           <Routes>
+            <Route path="//start-a-project" element={<ContactUsPage />} />
             <Route path="/" element={<HomePage />} />
+            <Route path="/services" element={<HomePage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/contact-us" element={<ContactUsPage />} />
             <Route path="/our-projects" element={<OurProjectsPage />} />
+            <Route path="/nailova" element={<Nailova />} />
+
           </Routes>
           <Footer />
         </>

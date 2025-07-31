@@ -1,5 +1,5 @@
 import React from 'react';
-import './Logos.css'; // Import the raw CSS file
+import '../styles/Logos.css'; // Import the raw CSS file
 
 // Import the specific logo group image
 import logoGroup from '../assets/images/Group 27@2x.png'; 

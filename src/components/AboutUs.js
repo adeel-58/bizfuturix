@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutUs.css';
+import '../styles/AboutUs.css';
 import aboutUsBackground from '../assets/images/aboutusbackground.png';
 
 const AboutUs = () => {
@@ -11,15 +11,12 @@ const AboutUs = () => {
       {/* Left-aligned content */}
       <div className="aboutus-content">
         <h3 className="aboutus-subheading">Every brand has a story...</h3>
-        <h1 className="aboutus-heading">We bring yours<br />to life.</h1>
+        <h1 className="aboutus-heading">We bring yours to life.</h1>
         <p className="aboutus-paragraph">
-          At Bizzfuturix, we craft smart, creative advertising that makes brands stand out and connect with people.
-          We're a team of strategists, designers, and storytellers driven by one goal: to turn ideas into results.
-          From branding to digital campaigns, we help businesses grow through clear vision, bold creativity, and
-          future-ready strategies.
+         At BizFuturix, we’re a design and advertising agency that helps brands stand out. We specialize in logo design, branding, web development, social media, packaging, and marketing campaigns that connect with your audience. We also build AI-powered agents and chatbots to elevate customer experience and automate engagement. Whether you're starting fresh or scaling up, we bring creative ideas and smart strategies to life, turning your vision into powerful visuals and real results.
         </p>
         <p className="aboutus-cta">
-          Let’s build the future of your brand — <span>together.</span>
+          Let’s shape the future of your brand <span>together.</span>
         </p>
       </div>
     </section>

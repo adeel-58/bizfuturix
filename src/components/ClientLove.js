@@ -1,42 +1,46 @@
 import React from 'react';
-import './ClientLove.css';
+import { useMediaQuery } from 'react-responsive';
+import '../styles/ClientLove.css';
 
 import logoNooky from '../assets/images/logo-nooky.svg';
 import logoConstructors from '../assets/images/logo-constructors.svg';
 import logoNailova from '../assets/images/logo-nailova.png';
 import commaIcon from '../assets/images/comma-icon.svg';
+import { Link } from 'react-router-dom';
 
 const clientReviews = [
     {
         id: 1,
-        name: "Adeel",
-        review: "Lorem Ipsum is simply dummy text of the printing",
-        avatar: "https://placehold.co/60x60/FFFFFF/000000?text=A"
+        name: "NovaFit Apparel",
+        review: "They just got our vision. The logo, the vibe, everything felt right from day one",
+        avatar: "https://placehold.co/60x60/FFFFFF/000000?text=N"
     },
     {
         id: 2,
-        name: "Adeel",
-        review: "Lorem Ipsum is simply dummy text of the printing",
-        avatar: "https://placehold.co/60x60/FFFFFF/000000?text=A"
+        name: "Bloom Organics",
+        review: "Our new website not only looks beautiful, it tells our story perfectly.",
+        avatar: "https://placehold.co/60x60/FFFFFF/000000?text=B"
     },
     {
         id: 3,
-        name: "Adeel",
-        review: "Lorem Ipsum is simply dummy text of the printing",
-        avatar: "https://placehold.co/60x60/FFFFFF/000000?text=A"
+        name: "TechNest Solutions",
+        review: "Working with BizFuturix felt like having an in-house team. The results? Way beyond our expectations.",
+        avatar: "https://placehold.co/60x60/FFFFFF/000000?text=T"
     },
 ];
 
 const ClientLove = () => {
+    const isMobile = useMediaQuery({ maxWidth: 767 });
+
     return (
         <div className="clientlove-container">
             <div className="clientlove-content">
-                {/* Left Section */}
+                {/* Left Section (keep original button hidden on mobile) */}
                 <div className="left-section">
                     <img src={commaIcon} alt="Quote Icon" className="comma-icon" />
                     <h2 className="client-title">Clients Love</h2>
                     <p className="client-description">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Our clients don’t just work with us, they trust us, love the results, and keep coming back.
                     </p>
 
                     <div className="client-logos">
@@ -45,10 +49,14 @@ const ClientLove = () => {
                         <img src={logoNailova} alt="Nailova Logo" className="client-logo" />
                     </div>
 
-                    <button className="start-project-button2">Contact us</button>
+                    {/* Desktop only */}
+                    {!isMobile && (
+                        <Link to="/contact-us" className="start-project-button2">Contact us</Link>
+                        
+                    )}
                 </div>
 
-                {/* Right Section - Client Reviews */}
+                {/* Right Section - Reviews + Mobile button */}
                 <div className="right-section">
                     {clientReviews.map(review => (
                         <div key={review.id} className="review-card">
@@ -65,6 +73,12 @@ const ClientLove = () => {
                             <p className="full-review-text">{review.review}</p>
                         </div>
                     ))}
+
+                    {/* Mobile only */}
+                    {isMobile && (
+                        <Link to="/contact-us"  className="start-project-button2 mobile-contact-button fixed-bottom-button">Contact us</Link>
+                        
+                    )}
                 </div>
             </div>
         </div>
