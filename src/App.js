@@ -9,7 +9,7 @@ import {
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Nailova from './components/Nailova';
+
 
 
 import HomePage from './pages/HomePage';
@@ -17,7 +17,8 @@ import BouncingLoader from './components/BouncingLoader';
 import AboutUsPage from './pages/AboutUsPage';
 import ContactUsPage from './pages/ContactUsPage';
 import OurProjectsPage from './pages/OurProjectsPage';
-
+import NailovaPresentation from './pages/NailovaPresentation';  
+import NookyPresentation from './pages/NookyPresentation';
 
 function AppWrapper() {
   const [loading, setLoading] = useState(false);        // Controls loader visibility
@@ -50,16 +51,17 @@ function AppWrapper() {
       {pageVisible && (
         <>
           <Header />
-          
+
           <Routes>
-            <Route path="//start-a-project" element={<ContactUsPage />} />
             <Route path="/" element={<HomePage />} />
             <Route path="/services" element={<HomePage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/contact-us" element={<ContactUsPage />} />
+            <Route path="/start-a-project" element={<ContactUsPage />} />
             <Route path="/our-projects" element={<OurProjectsPage />} />
-            <Route path="/nailova" element={<Nailova />} />
-
+            <Route path="/nailova" element={<NailovaPresentation />} />
+            <Route path="/nooky" element={<NookyPresentation />} />
+            
           </Routes>
           <Footer />
         </>

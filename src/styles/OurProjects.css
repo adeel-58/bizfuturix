@@ -22,7 +22,7 @@
   height: 350px;
   overflow: hidden;
   
-  
+  border: 1px solid #383838;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: white;
 }

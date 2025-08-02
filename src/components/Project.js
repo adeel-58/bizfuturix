@@ -19,44 +19,44 @@ const Project = () => {
         {
             id: 1,
             name: "Nailova",
-            services: ["Website Development", "Design", "Marketing"],
+            services: ["Branding","Website Design", "Web Development"],
             image: require('../assets/images/nailovamockup.jpg'),
             link: "/nailova"
         },
         {
             id: 2,
-            name: "Nailova",
-            services: ["Website Development", "Design", "Marketing"],
-            image: require('../assets/images/nailovamockup.jpg'),
-            link: "/nailova"
+            name: "Nooky",
+            services: ["Branding"],
+            image: require('../assets/images/nookymockup.jpg'),
+            link: "/nooky"
         },
         {
             id: 3,
-            name: "Nailova",
-            services: ["Website Development", "Design", "Marketing"],
-            image: require('../assets/images/nailovamockup.jpg'),
-            link: "/nailova"
+            name: "Coming Soon",
+            services: ["Coming Soon"],
+            image: require('../assets/images/cs.png'),
+            link: "#"
         },
         {
             id: 4,
-            name: "Nailova",
-            services: ["Website Development", "Design", "Marketing"],
-            image: require('../assets/images/nailovamockup.jpg'),
-            link: "/nailova"
+            name: "Coming Soon",
+            services: ["Coming Soon"],
+            image: require('../assets/images/cs.png'),
+            link: "#"
         },
         {
             id: 5,
-            name: "Nailova",
-            services: ["Website Development", "Design", "Marketing"],
-            image: require('../assets/images/nailovamockup.jpg'),
-          link: "/nailova"
+           name: "Coming Soon",
+            services: ["Coming Soon"],
+            image: require('../assets/images/cs.png'),
+            link: "#"
         },
         {
             id: 6,
-            name: "Nailova",
-            services: ["Website Development", "Design", "Marketing"],
-            image: require('../assets/images/nailovamockup.jpg'),
-           link: "/nailova"
+           name: "Coming Soon",
+            services: ["Coming Soon"],
+            image: require('../assets/images/cs.png'),
+            link: "#"
         },
     ];
 

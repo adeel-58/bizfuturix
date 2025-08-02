@@ -4,26 +4,26 @@ import "../styles/OurProjects.css";
 
 import img1 from "../assets/images/projects/img1.jpg";
 import img2 from "../assets/images/projects/img2.jpg";
-import img3 from "../assets/images/projects/img3.jpg";
-import img4 from "../assets/images/projects/img4.jpg";
-import img5 from "../assets/images/projects/img5.jpg";
-import img6 from "../assets/images/projects/img6.jpg";
-import img7 from "../assets/images/projects/img7.jpg";
-import img8 from "../assets/images/projects/img8.jpg";
+import img3 from "../assets/images/projects/cs.png";
+import img4 from "../assets/images/projects/cs.png";
+import img5 from "../assets/images/projects/cs.png";
+import img6 from "../assets/images/projects/cs.png";
+import img7 from "../assets/images/projects/cs.png";
+import img8 from "../assets/images/projects/cs.png";
 
 const OurProjects = () => {
   const imagesTop = [
     { image: img1, link: "/nailova" },
-    { image: img2, link: "/nailova" },
-    { image: img3, link: "/nailova" },
-    { image: img4, link: "/nailova" },
+    { image: img2, link: "/nooky" },
+    { image: img3, link: "#" },
+    { image: img4, link: "#" },
   ];
 
   const imagesBottom = [
-    { image: img5, link: "/nailova" },
-    { image: img6, link: "/nailova" },
-    { image: img7, link: "/nailova" },
-    { image: img8, link: "/nailova" },
+    { image: img5, link: "#" },
+    { image: img6, link: "#" },
+    { image: img7, link: "#" },
+    { image: img8, link: "#" },
   ];
 
   return (
