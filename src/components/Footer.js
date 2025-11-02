@@ -29,7 +29,7 @@ const Footer = () => {
                         <a href="https://www.instagram.com/bizfuturix/" target="_blank" rel="noopener noreferrer" className="social-icon-1">
                             <img src={instagramIcon} alt="Instagram" className="social-icon-img-1" />
                         </a>
-                        <a href="https://linkedin.com/company/bizfuturix" target="_blank" rel="noopener noreferrer" className="social-icon-1">
+                        <a href="https://www.linkedin.com/company/bizfuturix" target="_blank" rel="noopener noreferrer" className="social-icon-1">
                             <img src={pinterestIcon} alt="Pinterest" className="social-icon-img-1" />
                         </a>
                     </div>

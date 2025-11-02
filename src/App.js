@@ -19,6 +19,7 @@ import ContactUsPage from './pages/ContactUsPage';
 import OurProjectsPage from './pages/OurProjectsPage';
 import NailovaPresentation from './pages/NailovaPresentation';  
 import NookyPresentation from './pages/NookyPresentation';
+import EcommercePage from './pages/EcommercePage';
 
 function AppWrapper() {
   const [loading, setLoading] = useState(false);        // Controls loader visibility
@@ -61,6 +62,7 @@ function AppWrapper() {
             <Route path="/our-projects" element={<OurProjectsPage />} />
             <Route path="/nailova" element={<NailovaPresentation />} />
             <Route path="/nooky" element={<NookyPresentation />} />
+            <Route path="/ecommerce" element={<EcommercePage />} />
             
           </Routes>
           <Footer />

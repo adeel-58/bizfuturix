@@ -26,7 +26,7 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>BizFuturix — Your Digital Future</title>
+        <title>BizFuturix — Design & Advertising Agency</title>
         <meta name="description" content="BizFuturix is a Design and Advertising Agency offering professional web development, branding, and design services." />
         <meta name="keywords" content="BizFuturix, biz futurix,bizfuturix, Biz Futurix, digital agency, web development, design, branding, software company" />
         <meta name="author" content="BizFuturix Team" />
@@ -40,7 +40,7 @@ const HomePage = () => {
 
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="BizFuturix | Your Digital Future" />
+        <meta name="twitter:title" content="BizFuturix | Design & Advertising Agency" />
         <meta name="twitter:description" content="We Help Brands Look Premium Online — Through Websites, Social Content & AI Agents That Convert." />
         <meta name="twitter:image" content="https://bizfuturix.com/og-image.png" />
 

@@ -19,7 +19,7 @@ const Project = () => {
         {
             id: 1,
             name: "Nailova",
-            services: ["Branding","Website Design", "Web Development"],
+            services: ["Branding","Website Design","Web Development"],
             image: require('../assets/images/nailovamockup.jpg'),
             link: "/nailova"
         },
@@ -32,17 +32,17 @@ const Project = () => {
         },
         {
             id: 3,
-            name: "Coming Soon",
-            services: ["Coming Soon"],
-            image: require('../assets/images/cs.png'),
-            link: "#"
+            name: "Store N Supply",
+            services: ["SaaS", "Web Design", "Web App Dev"],
+            image: require('../assets/images/storensupply.png'),
+            link: "https://www.storensupply.com"
         },
         {
             id: 4,
-            name: "Coming Soon",
-            services: ["Coming Soon"],
-            image: require('../assets/images/cs.png'),
-            link: "#"
+            name: "Ecommerce Account Management",
+            services: ["Account Setup","Product Listing","Order Fulfillment","Store Management"],
+            image: require('../assets/images/projects/ecom.webp'),
+            link: "/ecommerce"
         },
         {
             id: 5,

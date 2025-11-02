@@ -1,0 +1,21 @@
+
+
+hero
+heading font 50px
+font subheading 25px
+font text button 12px 
+
+
+
+font small heading 15px
+font section heading 35.71px
+
+
+#FF6B00 yellow
+#264653 greenish
+#383838 blackish
+
+
+the image that fits is 1920 * 11445 , and my image size is 2939 *13505
+
+

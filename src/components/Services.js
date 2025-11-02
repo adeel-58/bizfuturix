@@ -1,10 +1,13 @@
 import React from 'react';
 import '../styles/Services.css';
 import { Link } from 'react-router-dom';
- 
+
 import DesignIcon from '../icons/design.svg';
 import DevelopmentIcon from '../icons/development.svg';
 import CodingIcon from '../icons/marketing.svg';
+import SaaSIcon from '../icons/saas.svg';
+import EcommIcon from '../icons/purchase.svg';
+
 import { useMediaQuery } from 'react-responsive';
 
 const Services = () => {
@@ -51,12 +54,49 @@ const Services = () => {
                         <div className="icon-circle">
                             <img src={CodingIcon} alt="Marketing" className="icon-svg" />
                         </div>
-                        <h3 className="card-title3">Marketing</h3>
+                        <h3 className="card-title3">Digital Marketing</h3>
                         <ul className="card-description">
                             <li>Instagram & Paid Ad Campaigns</li>
                             <li>Social Media Strategy & Growth</li>
                             <li>Conversion Rate Optimization</li>
                             <li>Analytics and Insights</li>
+                        </ul>
+                    </div>
+                    <div className="service-card">
+                        <div className="icon-circle">
+                            <img src={SaaSIcon} alt="Marketing" className="icon-svg" />
+                        </div>
+                        <h3 className="card-title4">SaaS App Development</h3>
+                        <ul className="card-description4">
+                            <li>Cloud-based SaaS solutions</li>
+                            <li>Business automation tools</li>
+                            <li>Secure API integrations</li>
+                            <li>Subscription management</li>
+
+                        </ul>
+                    </div>
+                    <div className="service-card">
+                        <div className="icon-circle">
+                            <img src={EcommIcon} alt="Marketing" className="icon-svg" />
+                        </div>
+                        <h3 className="card-title5">E-commerce Solutions</h3>
+                        <ul className="card-description4">
+                            <li>Amazon, Walmart, eBay, Etsy</li>
+                            <li>Inventory Management</li>
+                            <li>Order Fulfillment</li>
+                            <li>Listings & VA Support</li>
+                        </ul>
+                    </div>
+                    <div className="service-card">
+                        <div className="icon-circle">
+                            <img src={DevelopmentIcon} alt="Marketing" className="icon-svg" />
+                        </div>
+                        <h3 className="card-title6">3D Web Development</h3>
+                        <ul className="card-description4">
+                            <li>3D interactive websites</li>
+                            <li>Virtual tour experiences</li>
+                            <li>Custom 3D integration</li>
+                            <li>Architectural 3D Visuals</li>
                         </ul>
                     </div>
                 </div>
@@ -83,20 +123,46 @@ const Services = () => {
                             <li>AI-powered Chatbot Integration</li>
                         </ul>
 
-                        <p className="sub-heading">Marketing</p>
+                        <p className="sub-heading">Digital Marketing</p>
                         <ul className="single-description">
                             <li>Instagram & Paid Ad Campaigns</li>
                             <li>Social Media Strategy & Growth</li>
                             <li>Conversion Rate Optimization</li>
                             <li>Analytics and Insights</li>
                         </ul>
+                        <p className="sub-heading">SaaS App Development</p>
+                        <ul className="single-description">
+                            <li>Cloud-based SaaS solutions</li>
+                            <li>Business automation tools</li>
+                            <li>Secure API integrations</li>
+                            <li>Subscription management</li>
+                        </ul>
+
+                        <p className="sub-heading">E-commerce Solutions</p>
+                        <ul className="single-description">
+                            <li>Amazon, Walmart, eBay, Etsy</li>
+                            <li>Inventory Management</li>
+                            <li>Order Fulfillment</li>
+                            <li>Listings & VA Support</li>
+
+                            
+                        </ul>
+
+                        <p className="sub-heading">3D Web Development</p>
+                        <ul className="single-description">
+                            <li>3D interactive websites</li>
+                            <li>Virtual tour experiences</li>
+                            <li>Custom 3D integration</li>
+                            <li>Architectural 3D Visuals</li>
+                        </ul>
+
                     </div>
                 </div>
             )}
 
             <Link to="/contact-us" className="start-project-button">
-  Start a project
-</Link>
+                Start a project
+            </Link>
         </div>
     );
 };

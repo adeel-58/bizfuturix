@@ -62,7 +62,7 @@ const Header = () => {
               <img src={instaIcon} alt="Instagram" className="social-icon" />
               <span>Instagram</span>
             </a>
-            <a href="https://linkedin.com/company/bizfuturix" target="_blank" rel="noopener noreferrer" className="social-link">
+            <a href="https://www.linkedin.com/company/bizfuturix" target="_blank" rel="noopener noreferrer" className="social-link">
               <img src={twIcon} alt="Twitter" className="social-icon" />
               <span>Linkedin</span>
             </a>

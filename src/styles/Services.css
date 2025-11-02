@@ -49,7 +49,7 @@
     /* gray-600 */
     line-height: 1.6;
     /* leading-relaxed */
-    margin-bottom: 150px;
+    margin-bottom: 120px;
     /* mb-12 */
     max-width: 768px;
     /* max-w-4xl for text content */
@@ -87,6 +87,7 @@
     transition: transform 0.3s ease-in-out, z-index 0.3s;
     z-index: 1;
     transform: scale(1);
+    margin-top: 30px;
     /* Ensure default scale is 1 */
 }
 
@@ -98,6 +99,7 @@
     width: 96px;
     /* Retained 96px as per current state */
     height: 96px;
+    color: #ffffff;
     /* Retained 96px as per current state */
     background-color: #FF6B00;
     border-radius: 50%;
@@ -156,8 +158,62 @@
     margin-bottom: 20px;
     margin-top: 10px;
     /* mb-3 */
-    margin-right: 181px;
+    margin-right: 90px;
 
+}
+
+
+.card-title4 {
+    font-size: 25px;
+    /* text-xl */
+    width: 300px;
+    font-weight: 600;
+    /* font-semibold */
+    color: #383838;
+    /* gray-900 */
+    margin-bottom: 20px;
+    margin-top: 10px;
+    /* mb-3 */
+    margin-right: 0px;
+
+}
+.card-title5 {
+    font-size: 25px;
+    /* text-xl */
+    width: 300px;
+    font-weight: 600;
+    /* font-semibold */
+    color: #383838;
+    /* gray-900 */
+    margin-bottom: 20px;
+    margin-top: 10px;
+    /* mb-3 */
+    margin-right: 25px;
+
+}
+.card-title6 {
+    font-size: 25px;
+    /* text-xl */
+    width: 300px;
+    font-weight: 600;
+    /* font-semibold */
+    color: #383838;
+    /* gray-900 */
+    margin-bottom: 20px;
+    margin-top: 10px;
+    /* mb-3 */
+    margin-right: 5px;
+
+}
+.card-description4 {
+     color: #383838;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 16px;
+    padding-left: 0px;
+    margin: 0;
+    list-style: none;
+    margin-right: 55px;
 }
 
 .card-description {
@@ -200,6 +256,20 @@
     
 }
 .card-description2 li::before {
+    content: '✓';
+    color: #FF6B00; /* Orange check mark */
+    font-weight: bold;
+    margin-right: 10px;
+    display: inline-block;
+    width: 20px;
+    
+}
+.card-description4 li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+}
+.card-description4 li::before {
     content: '✓';
     color: #FF6B00; /* Orange check mark */
     font-weight: bold;
