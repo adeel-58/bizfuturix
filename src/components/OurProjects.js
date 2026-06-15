@@ -3,8 +3,8 @@ import "../styles/OurProjects.css";
 
 import img1 from "../assets/images/projects/img1.jpg";
 import img2 from "../assets/images/projects/img2.jpg";
-import img3 from "../assets/images/projects/storensupply.png";
-import img4 from "../assets/images/projects/ecom.webp";
+import img3 from "../assets/images/projects/img3.webp";
+import img4 from "../assets/images/projects/img4.jpeg";
 import img5 from "../assets/images/projects/cs.png";
 import img6 from "../assets/images/projects/cs.png";
 import img7 from "../assets/images/projects/cs.png";
@@ -12,10 +12,10 @@ import img8 from "../assets/images/projects/cs.png";
 
 const OurProjects = () => {
   const imagesTop = [
-    { image: img1, link: "/nailova", name: "Nailova", services: ["Branding", "Website Design", "Web Development"] },
-    { image: img2, link: "/nooky", name: "Nooky", services: ["Branding"] },
-    { image: img3, link: "https://www.storensupply.com", name: "Store N Supply", services: ["SaaS", "Web Design", "Web App Dev"] },
-    { image: img4, link: "/ecommerce", name: "Ecommerce Account Management", services: ["Account Setup","Product Listing","Order Fulfillment","Store Management"] },
+    { image: img1, link: "/nailova", name: "Nailova", services: ["Logo","Branding","Website Design & Dev"] },
+    { image: img2, link: "/nooky", name: "Nooky", services: ["Logo","Branding"] },
+    { image: img3, link: "/texasac", name: "Texas Central AC", services: ["Web Design", "Web Development"] },
+    { image: img4, link: "/funcity", name: "FunCity", services: ["Logo","Branding","Website Design & Dev"] },
   ];
 
   const imagesBottom = [

@@ -1,0 +1,339 @@
+Folder PATH listing
+Volume serial number is FC04-427B
+E:.
+³   .gitignore
+³   fonts bizfuturix.txt
+³   output.txt
+³   package.json
+³   
+ÃÄÄÄbuild
+³   ³   .htaccess
+³   ³   asset-manifest.json
+³   ³   favicon.ico
+³   ³   google337c18db86288862.html
+³   ³   index.html
+³   ³   logo.svg
+³   ³   manifest.json
+³   ³   og-image.png
+³   ³   robots.txt
+³   ³   sitemap.xml
+³   ³   
+³   ÀÄÄÄstatic
+³       ÃÄÄÄcss
+³       ³       main.f49d73e6.css
+³       ³       main.f49d73e6.css.map
+³       ³       
+³       ÃÄÄÄjs
+³       ³       main.070f9d39.js
+³       ³       main.070f9d39.js.LICENSE.txt
+³       ³       main.070f9d39.js.map
+³       ³       
+³       ÀÄÄÄmedia
+³               aboutusbackground.cb7b348945a442dc599d.png
+³               arrow.03d6bec21a3c99ad83e2f30ab63637f9.svg
+³               blacklogo.4d1e0fcd70668b458e39d2ee3be223e4.svg
+³               brownback.67058bdd10eba26d58ce.svg
+³               comma-icon.c6732a96b2a492581df0c659269df5fd.svg
+³               contactusbackground.d7456a34ab02860ee5ed.png
+³               contactusbackgroundphone.405f64c9feec6ce4b0b6.png
+³               cs.d647d6a9cbf87c0d8746.png
+³               design.b90e1c79c87138ec0c9fa441f199a29b.svg
+³               development.e6625857617b04c0022942a5a48f27a9.svg
+³               email.399029106fedfba78e81b275e6f36dd2.svg
+³               fb.83b56f809a00546fe5748a7979934a8b.svg
+³               Group 27@2x.a1da7ccb804e15c34317.png
+³               herobackground.a3b814bc198b57833ca7.png
+³               img1.0f325780afabe017b705.jpg
+³               img2.17f85c6c67dcdb15bfe4.jpg
+³               img3.1831bdca619b586a0520.webp
+³               insta.96287fe52cdcacc5ba5550bae2b3128d.svg
+³               linkdin.20bc5f073799edc9275d2945bf9bd1d9.svg
+³               logo-constructors.d1b6b01ffc164d9f76e3827ec4eeec50.svg
+³               logo-nailova.e8ca659e057e4961126d.png
+³               logo-nooky.8c96d7229e22af2ffe17e7c321154eb8.svg
+³               logo.d77e5fae4e372ad9a1d65dd5c50cb8d4.svg
+³               marketing.93e0a4d3354b241b35cae692e07ca37e.svg
+³               menubackground.8ce6fc4a191a8c0ffe7cdac1b2e845fc.svg
+³               nailova.3ca03d23726dc410f6ad.webp
+³               nailovamockup.0f325780afabe017b705.jpg
+³               nooky.4cc4514c36369ba8526e.webp
+³               nookymockup.17f85c6c67dcdb15bfe4.jpg
+³               phone.f43f57a2fa5e22b8b10fa8622a129963.svg
+³               purchase.11bf032d2ea891dea92cd15d572a3115.svg
+³               saas.7736f16a14a88668526a4760283627ae.svg
+³               texascentralac.361f3896913bac496d0e.webp
+³               texascentralacmockup.1831bdca619b586a0520.webp
+³               
+ÃÄÄÄnode_modules
+³   ÀÄÄÄ.bin
+³           acorn
+³           acorn.cmd
+³           acorn.ps1
+³           ansi-html
+³           ansi-html.cmd
+³           ansi-html.ps1
+³           autoprefixer
+³           autoprefixer.cmd
+³           autoprefixer.ps1
+³           baseline-browser-mapping
+³           baseline-browser-mapping.cmd
+³           baseline-browser-mapping.ps1
+³           browserslist
+³           browserslist.cmd
+³           browserslist.ps1
+³           css-blank-pseudo
+³           css-blank-pseudo.cmd
+³           css-blank-pseudo.ps1
+³           css-has-pseudo
+³           css-has-pseudo.cmd
+³           css-has-pseudo.ps1
+³           css-prefers-color-scheme
+³           css-prefers-color-scheme.cmd
+³           css-prefers-color-scheme.ps1
+³           cssesc
+³           cssesc.cmd
+³           cssesc.ps1
+³           detect
+³           detect-port
+³           detect-port.cmd
+³           detect-port.ps1
+³           detect.cmd
+³           detect.ps1
+³           ejs
+³           ejs.cmd
+³           ejs.ps1
+³           escodegen
+³           escodegen.cmd
+³           escodegen.ps1
+³           esgenerate
+³           esgenerate.cmd
+³           esgenerate.ps1
+³           eslint
+³           eslint.cmd
+³           eslint.ps1
+³           esparse
+³           esparse.cmd
+³           esparse.ps1
+³           esvalidate
+³           esvalidate.cmd
+³           esvalidate.ps1
+³           he
+³           he.cmd
+³           he.ps1
+³           html-minifier-terser
+³           html-minifier-terser.cmd
+³           html-minifier-terser.ps1
+³           import-local-fixture
+³           import-local-fixture.cmd
+³           import-local-fixture.ps1
+³           is-docker
+³           is-docker.cmd
+³           is-docker.ps1
+³           jake
+³           jake.cmd
+³           jake.ps1
+³           jest
+³           jest.cmd
+³           jest.ps1
+³           jiti
+³           jiti.cmd
+³           jiti.ps1
+³           js-yaml
+³           js-yaml.cmd
+³           js-yaml.ps1
+³           jsesc
+³           jsesc.cmd
+³           jsesc.ps1
+³           json5
+³           json5.cmd
+³           json5.ps1
+³           loose-envify
+³           loose-envify.cmd
+³           loose-envify.ps1
+³           lz-string
+³           lz-string.cmd
+³           lz-string.ps1
+³           mime
+³           mime.cmd
+³           mime.ps1
+³           mkdirp
+³           mkdirp.cmd
+³           mkdirp.ps1
+³           multicast-dns
+³           multicast-dns.cmd
+³           multicast-dns.ps1
+³           nanoid
+³           nanoid.cmd
+³           nanoid.ps1
+³           node-which
+³           node-which.cmd
+³           node-which.ps1
+³           parser
+³           parser.cmd
+³           parser.ps1
+³           react-scripts
+³           react-scripts.cmd
+³           react-scripts.ps1
+³           regjsparser
+³           regjsparser.cmd
+³           regjsparser.ps1
+³           resolve
+³           resolve.cmd
+³           resolve.ps1
+³           rimraf
+³           rimraf.cmd
+³           rimraf.ps1
+³           rollup
+³           rollup.cmd
+³           rollup.ps1
+³           semver
+³           semver.cmd
+³           semver.ps1
+³           sucrase
+³           sucrase-node
+³           sucrase-node.cmd
+³           sucrase-node.ps1
+³           sucrase.cmd
+³           sucrase.ps1
+³           svgo
+³           svgo.cmd
+³           svgo.ps1
+³           tailwind
+³           tailwind.cmd
+³           tailwind.ps1
+³           tailwindcss
+³           tailwindcss.cmd
+³           tailwindcss.ps1
+³           terser
+³           terser.cmd
+³           terser.ps1
+³           update-browserslist-db
+³           update-browserslist-db.cmd
+³           update-browserslist-db.ps1
+³           uuid
+³           uuid.cmd
+³           uuid.ps1
+³           webpack
+³           webpack-dev-server
+³           webpack-dev-server.cmd
+³           webpack-dev-server.ps1
+³           webpack.cmd
+³           webpack.ps1
+³           
+ÃÄÄÄpublic
+³       .htaccess
+³       favicon.ico
+³       google337c18db86288862.html
+³       index.html
+³       logo.svg
+³       manifest.json
+³       og-image.png
+³       robots.txt
+³       sitemap.xml
+³       
+ÀÄÄÄsrc
+    ³   App.css
+    ³   App.js
+    ³   App.test.js
+    ³   index.css
+    ³   index.js
+    ³   
+    ÃÄÄÄassets
+    ³   ÀÄÄÄimages
+    ³       ³   aboutusbackground.png
+    ³       ³   aboutusbackground.svg
+    ³       ³   brownback.svg
+    ³       ³   comma-icon.svg
+    ³       ³   contactusbackground.png
+    ³       ³   contactusbackgroundphone.png
+    ³       ³   cs.png
+    ³       ³   funcity.webp
+    ³       ³   funcitymockup.jpeg
+    ³       ³   Group 27@2x.png
+    ³       ³   herobackground.png
+    ³       ³   invertedcoma.png
+    ³       ³   logo-constructors.svg
+    ³       ³   logo-nailova.png
+    ³       ³   logo-nooky.svg
+    ³       ³   nailova.webp
+    ³       ³   nailova1.webp
+    ³       ³   nailovamockup.jpg
+    ³       ³   nooky.webp
+    ³       ³   nookymockup.jpg
+    ³       ³   projectback.svg
+    ³       ³   texascentralac.webp
+    ³       ³   texascentralacmockup.webp
+    ³       ³   
+    ³       ÀÄÄÄprojects
+    ³               cs.png
+    ³               img1.jpg
+    ³               img2.jpg
+    ³               img3.webp
+    ³               img4.jpeg
+    ³               
+    ÃÄÄÄcomponents
+    ³       AboutUs.js
+    ³       BouncingLoader.js
+    ³       ClientLove.js
+    ³       ContactUs.js
+    ³       Footer.js
+    ³       Funcity.js
+    ³       Header.js
+    ³       Hero.js
+    ³       Logos.js
+    ³       Nailova.js
+    ³       Nooky.js
+    ³       OurProjects.js
+    ³       Project.js
+    ³       Services.js
+    ³       TalkToUs.js
+    ³       TexasAC.js
+    ³       
+    ÃÄÄÄicons
+    ³       3d-web.svg
+    ³       arrow.svg
+    ³       blackhamburger.svg
+    ³       blacklogo.svg
+    ³       design.svg
+    ³       development.svg
+    ³       ecom.svg
+    ³       email.svg
+    ³       fb.svg
+    ³       hamburger.svg
+    ³       insta.svg
+    ³       linkdin.svg
+    ³       logo.svg
+    ³       marketing.svg
+    ³       menubackground.svg
+    ³       phone.svg
+    ³       purchase.svg
+    ³       saas.svg
+    ³       tw.svg
+    ³       
+    ÃÄÄÄpages
+    ³       AboutUsPage.js
+    ³       ContactUsPage.js
+    ³       FuncityPresentation.js
+    ³       HomePage.js
+    ³       NailovaPresentation.js
+    ³       NookyPresentation.js
+    ³       OurProjectsPage.js
+    ³       TexasACPresentation.js
+    ³       
+    ÀÄÄÄstyles
+            AboutUs.css
+            BouncingLoader.css
+            ClientLove.css
+            ContactUs.css
+            Footer.css
+            Header.css
+            Hero.css
+            Logos.css
+            Nailova.css
+            Nooky.css
+            OurProjects.css
+            Project.css
+            Services.css
+            TalkToUs.css
+            TexasAC.css
+            

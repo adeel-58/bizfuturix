@@ -19,8 +19,9 @@ import ContactUsPage from './pages/ContactUsPage';
 import OurProjectsPage from './pages/OurProjectsPage';
 import NailovaPresentation from './pages/NailovaPresentation';  
 import NookyPresentation from './pages/NookyPresentation';
-import EcommercePage from './pages/EcommercePage';
-
+import FuncityPresentation from './pages/FuncityPresentation';
+import TexasACPresentation from './pages/TexasACPresentation';
+import ClinicGrowthPage from "./pages/ClinicGrowthPage";
 function AppWrapper() {
   const [loading, setLoading] = useState(false);        // Controls loader visibility
   const [pageVisible, setPageVisible] = useState(false); // Controls page content visibility
@@ -62,7 +63,10 @@ function AppWrapper() {
             <Route path="/our-projects" element={<OurProjectsPage />} />
             <Route path="/nailova" element={<NailovaPresentation />} />
             <Route path="/nooky" element={<NookyPresentation />} />
-            <Route path="/ecommerce" element={<EcommercePage />} />
+            <Route path="/funcity" element={<FuncityPresentation />} />
+            <Route path="/texasac" element={<TexasACPresentation />} />
+            <Route path="/clinic" element={<ClinicGrowthPage />} />
+
             
           </Routes>
           <Footer />

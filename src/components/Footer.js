@@ -19,7 +19,8 @@ const Footer = () => {
                     </div>
                     <div className="contact-details">
                         <p><strong>Email:</strong> bizfuturix@gmail.com</p>
-                        <p><strong>Phone:</strong> +40 758 577 624</p>
+                        <p><strong>Phone:</strong> +40 730 996 182</p>
+                        <p><strong>WA:</strong> +971 55 309 7736</p>
                         <p><strong>Location:</strong> Arad, Romania</p>
                     </div>
                     <div className="social-icons">
@@ -40,18 +41,20 @@ const Footer = () => {
     <div className="footer-card">
         <h3 className="section-title">Services</h3>
         <ul className="footer-links">
-            <li><Link to="/">Design</Link></li>
-            <li><Link to="/">Branding</Link></li>
+            <li><Link to="/">Logo Design</Link></li>
+            <li><Link to="/">AI Automation</Link></li>
+            <li><Link to="/">Premium Branding</Link></li>            
+            <li><Link to="/">PPC/Google Ads</Link></li>
             <li><Link to="/">Web Development</Link></li>
             <li><Link to="/">Social Media Marketing</Link></li>
-            <li><Link to="/">AI Integration</Link></li>
+            
         </ul>
     </div>
 
     <div className="footer-card">
         <h3 className="section-title">Learn</h3>
         <ul className="footer-links">
-            <li><Link to="/">About Us</Link></li>
+            <li><Link to="/about-us">About Us</Link></li>
             <li><Link to="/">Reviews</Link></li>
         </ul>
     </div>
@@ -60,7 +63,7 @@ const Footer = () => {
         <h3 className="section-title help-support-title">Help & Support</h3>
         <ul className="footer-links">
             
-            <li><Link to="/">Contact Us</Link></li>
+            <li><Link to="/contact-us">Contact Us</Link></li>
         </ul>
     </div>
 </div>

@@ -19,30 +19,30 @@ const Project = () => {
         {
             id: 1,
             name: "Nailova",
-            services: ["Branding","Website Design","Web Development"],
+            services: ["Logo","Branding","Website Design & Dev"],
             image: require('../assets/images/nailovamockup.jpg'),
             link: "/nailova"
         },
         {
             id: 2,
             name: "Nooky",
-            services: ["Branding"],
+            services: ["Logo","Branding"],
             image: require('../assets/images/nookymockup.jpg'),
             link: "/nooky"
         },
         {
             id: 3,
-            name: "Store N Supply",
-            services: ["SaaS", "Web Design", "Web App Dev"],
-            image: require('../assets/images/storensupply.png'),
-            link: "https://www.storensupply.com"
+            name: "Texas Central AC",
+            services: ["Web Design", "Web Development"],
+            image: require('../assets/images/texascentralacmockup.webp'),
+            link: "/texasac"
         },
         {
-            id: 4,
-            name: "Ecommerce Account Management",
-            services: ["Account Setup","Product Listing","Order Fulfillment","Store Management"],
-            image: require('../assets/images/projects/ecom.webp'),
-            link: "/ecommerce"
+           id: 4,
+           name: "Funcity",
+            services: ["Logo","Branding","Website Design & Dev"],
+            image: require('../assets/images/funcitymockup.jpeg'),
+            link: "/funcity"
         },
         {
             id: 5,

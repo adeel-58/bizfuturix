@@ -49,7 +49,7 @@ const Header = () => {
         <div className="header-top">
           <div className="contact-info">
             <img src={phoneIcon} alt="Phone" />
-            <span>+40 758 577 624</span>
+            <span>+40 730 996 182</span>
             <img src={emailIcon} alt="Email" />
             <span>bizfuturix@gmail.com</span>
           </div>
